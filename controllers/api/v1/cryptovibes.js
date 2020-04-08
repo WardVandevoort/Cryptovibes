@@ -1,13 +1,4 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-const transactionSchema = new Schema({
-    quantity: mongoose.Types.Decimal128,
-    receiver_id: String,
-    sender_id: String,
-    date: String,
-    type_id: String
-});
-const Transaction = mongoose.model("Transaction", transactionSchema);
+const Transaction = require("../../../models/Transaction");
 
 let d = new Date();
 let Month = d.getMonth() + 1;
@@ -25,15 +16,22 @@ const getTransactions = (req, res) => {
     });
 }
 
-const transaction = (req, res) => {
+const transaction = (req, res, next) => {
     let transaction = new Transaction();
-    transaction.quantity = 50,25;
+    transaction.quantity = req.body.quantity;
     transaction.receiver_id = "r0123456";
     transaction.sender_id = "r0746456";
     transaction.date = d.getDate() + "/" + Month + "/" + d.getFullYear() + "   " 
                        + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-    transaction.type_id = "1";
+    transaction.type_id = req.body.type_id;
     transaction.save((err, doc) => {
+        if(err){
+            res.json({
+                "status": "error",
+                "message": "Failed to save transaction"
+            });
+        }
+
         if(!err){
             res.json({
                 "status": "success",
