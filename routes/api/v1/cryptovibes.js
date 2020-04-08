@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const transactiesController = require("../../../controllers/api/v1/cryptovibes");
+const transactionsController = require("../../../controllers/api/v1/cryptovibes");
 
 
-router.post("/", transactiesController.transactie);
+router.post("/", transactionsController.transaction);
 
-router.get("/", transactiesController.getAll);
+router.get("/", transactionsController.getTransactions);
 
 module.exports = router;
 

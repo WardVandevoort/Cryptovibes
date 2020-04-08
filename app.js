@@ -6,7 +6,14 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const apiTransactiesRouter = require("./routes/api/v1/cryptovibes");
+const apiTransactionsRouter = require("./routes/api/v1/cryptovibes");
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/cryptovibes', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
 
 const app = express();
 
@@ -22,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use("/api/v1/cryptovibes", apiTransactiesRouter);
+app.use("/api/v1/cryptovibes", apiTransactionsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
