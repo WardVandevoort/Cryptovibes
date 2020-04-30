@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const transactionSchema = new Schema({
-    quantity: {
-        type: mongoose.Decimal128,
-        required: true
-    },
+    quantity: Number,
     receiver_id: String,
     sender_id: String,
     date: String,

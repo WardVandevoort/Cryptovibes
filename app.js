@@ -9,7 +9,7 @@ const usersRouter = require('./routes/users');
 const apiTransactionsRouter = require("./routes/api/v1/cryptovibes");
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/cryptovibes', {
+mongoose.connect('mongodb+srv://Ward:Ward@cluster0-4jxji.mongodb.net/test?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
