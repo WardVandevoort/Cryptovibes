@@ -9,7 +9,9 @@ router.get('/', transactionsController.getTransactions);
 
 router.get('/:id', transactionsController.getTransaction);
 
-router.get('/leaderboard', transactionsController.getWallet);
+router.get('/getUsers', transactionsController.getUsers);
+
+router.post('/newUser', transactionsController.user);
 
 module.exports = router;
 

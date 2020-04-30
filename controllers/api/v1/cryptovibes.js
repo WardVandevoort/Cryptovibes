@@ -58,13 +58,40 @@ const transaction = (req, res, next) => {
     });
 }
 
-const getWallet = (req, res) =>{
+const user = (req, res, next) => {
+    let user = new User();
+    user.firstname = req.body.firstname;
+    user.lastname = req.body.lastname;
+    user.email = req.body.email;
+    user.password = req.body.password;
+    user.wallet = req.body.wallet;
+    user.save((err, doc) => {
+        if(err){
+            res.json({
+                "status": "error",
+                "message": "Failed to save user"
+            });
+        }
+
+        if(!err){
+            res.json({
+                "status": "success",
+                "data": {
+                    "user": doc
+                }
+            });
+        }
+    });
+}
+
+const getUsers = (req, res) => {
     User.find({}, (err, docs) => {
         if(!err){
             res.json({
                 "status": "success",
-                "users": docs
-                
+                "data": {
+                    "users": docs
+                }
             });
         }
     });
@@ -73,4 +100,5 @@ const getWallet = (req, res) =>{
 module.exports.getTransactions = getTransactions;
 module.exports.getTransaction = getTransaction;
 module.exports.transaction = transaction;
-module.exports.getWallet = getWallet;
+module.exports.getUsers = getUsers;
+module.exports.user = user;
