@@ -1,4 +1,5 @@
 const Transaction = require('../../../models/Transaction');
+const User = require('../../../models/Users');
 
 let d = new Date();
 let Month = d.getMonth() + 1;
@@ -58,13 +59,12 @@ const transaction = (req, res, next) => {
 }
 
 const getWallet = (req, res) =>{
-    Transaction.find({}, (err, docs) => {
+    User.find({}, (err, docs) => {
         if(!err){
             res.json({
                 "status": "success",
-                "data": {
-                    "users": docs
-                }
+                "users": docs
+                
             });
         }
     });
