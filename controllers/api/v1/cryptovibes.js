@@ -3,6 +3,7 @@ const Transaction = require('../../../models/Transaction');
 let d = new Date();
 let Month = d.getMonth() + 1;
 
+
 const getTransactions = (req, res) => {
     Transaction.find({$or:[{"receiver_id": "r0746456"}, {"sender_id": "r0746456"}]}, (err, docs) => {
         if(!err){
@@ -17,7 +18,7 @@ const getTransactions = (req, res) => {
 }
 
 const getTransaction = (req, res) => {
-    Transaction.find({}, (err, doc) => {
+    Transaction.find({_id: req.params.id}, (err, doc) => {
         if(!err){
             res.json({
                 "status": "success",
@@ -56,6 +57,20 @@ const transaction = (req, res, next) => {
     });
 }
 
+const getWallet = (req, res) =>{
+    Transaction.find({}, (err, docs) => {
+        if(!err){
+            res.json({
+                "status": "success",
+                "data": {
+                    "users": docs
+                }
+            });
+        }
+    });
+}
+
 module.exports.getTransactions = getTransactions;
 module.exports.getTransaction = getTransaction;
 module.exports.transaction = transaction;
+module.exports.getWallet = getWallet;
