@@ -16,7 +16,7 @@ const getTransactions = (req, res) => {
     });
 }
 
-const getTransaction = (req, res) => {
+/* const getTransaction = (req, res) => {
     Transaction.find({}, (err, doc) => {
         if(!err){
             res.json({
@@ -27,13 +27,13 @@ const getTransaction = (req, res) => {
             });
         }
     });
-}
+} */
 
 const transaction = (req, res, next) => {
     let transaction = new Transaction();
     transaction.quantity = req.body.quantity;
     transaction.receiver_id = "r0123456";
-    transaction.sender_id = "r";
+    transaction.sender_id = "r007";
     transaction.date = d.getDate() + "/" + Month + "/" + d.getFullYear() + "   " 
                        + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     transaction.type_id = req.body.type_id;
