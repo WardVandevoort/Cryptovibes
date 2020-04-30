@@ -4,7 +4,7 @@ let d = new Date();
 let Month = d.getMonth() + 1;
 
 const getTransactions = (req, res) => {
-    Transaction.find({"receiver_id": "r0746456"} || {"sender_id": "r0746456"}, (err, docs) => {
+    Transaction.find({$or:[{"receiver_id": "r0746456"}, {"sender_id": "r0746456"}]}, (err, docs) => {
         if(!err){
             res.json({
                 "status": "success",
