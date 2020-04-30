@@ -16,7 +16,7 @@ const getTransactions = (req, res) => {
     });
 }
 
-/* const getTransaction = (req, res) => {
+const getTransaction = (req, res) => {
     Transaction.find({}, (err, doc) => {
         if(!err){
             res.json({
@@ -27,7 +27,7 @@ const getTransactions = (req, res) => {
             });
         }
     });
-} */
+}
 
 const transaction = (req, res, next) => {
     let transaction = new Transaction();
