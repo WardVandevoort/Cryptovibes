@@ -85,6 +85,7 @@ const user = (req, res, next) => {
 }
 
 const getUsers = (req, res) => {
+    console.log("werkt");
     User.find({}, (err, docs) => {
         if(!err){
             res.json({
@@ -92,6 +93,12 @@ const getUsers = (req, res) => {
                 "data": {
                     "users": docs
                 }
+            });
+        }
+        else{
+            res.json({
+                "status": "error",
+                "message": err
             });
         }
     });

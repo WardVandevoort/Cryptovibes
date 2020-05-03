@@ -7,9 +7,9 @@ router.post('/', transactionsController.transaction);
 
 router.get('/', transactionsController.getTransactions);
 
-router.get('/:id', transactionsController.getTransaction);
-
 router.get('/getUsers', transactionsController.getUsers);
+
+router.get('/:id', transactionsController.getTransaction);
 
 router.post('/newUser', transactionsController.user);
 
