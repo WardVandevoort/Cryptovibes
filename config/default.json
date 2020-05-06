@@ -1,6 +1,6 @@
 {
     "Database":{
-        "conn": "mongodb+srv://Ward:Ward@cluster0-4jxji.mongodb.net/test?retryWrites=true&w=majority"
+        "conn": "mongodb://localhost:27017/cryptovibes"
     },
     "jwt": {
         "secret" : "MyVerySecretWord"
