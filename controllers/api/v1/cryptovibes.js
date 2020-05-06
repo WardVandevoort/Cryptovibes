@@ -1,5 +1,5 @@
 const Transaction = require('../../../models/Transaction');
-const User = require('../../../models/Users');
+const Users = require('../../../models/Users');
 
 let d = new Date();
 let Month = d.getMonth() + 1;
@@ -58,14 +58,14 @@ const transaction = (req, res, next) => {
     });
 }
 
-const user = (req, res, next) => {
-    let user = new User();
-    user.firstname = req.body.firstname;
-    user.lastname = req.body.lastname;
-    user.email = req.body.email;
-    user.password = req.body.password;
-    user.wallet = req.body.wallet;
-    user.save((err, doc) => {
+const users = (req, res, next) => {
+    let users = new Users();
+    users.firstname = req.body.firstname;
+    users.lastname = req.body.lastname;
+    users.email = req.body.email;
+    users.password = req.body.password;
+    users.wallet = req.body.wallet;
+    users.save((err, doc) => {
         if(err){
             res.json({
                 "status": "error",
@@ -86,7 +86,7 @@ const user = (req, res, next) => {
 
 const getUsers = (req, res) => {
     console.log("werkt");
-    User.find({}, (err, docs) => {
+    Users.find({}, (err, docs) => {
         if(!err){
             res.json({
                 "status": "success",
@@ -108,4 +108,4 @@ module.exports.getTransactions = getTransactions;
 module.exports.getTransaction = getTransaction;
 module.exports.transaction = transaction;
 module.exports.getUsers = getUsers;
-module.exports.user = user;
+module.exports.users = users;
