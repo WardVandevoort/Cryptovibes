@@ -4,17 +4,22 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const apiTransactionsRouter = require("./routes/api/v1/cryptovibes");
 const passport = require('./passport/passport');
-
+const config = require('config');
 const mongoose = require('mongoose');
+
 mongoose.set('useCreateIndex', true); //warning nieuwe syntax oplossen, laten staan
-mongoose.connect('mongodb+srv://Ward:Ward@cluster0-4jxji.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(config.get('Database.conn'), {
   useNewUrlParser: true,
   useUnifiedTopology: true
+}).then( () => {
+  console.log("connection success 😁");
+})
+.catch ((err) => {
+  console.log(`error: ${err} 😢`);
 });
 
 const app = express();
