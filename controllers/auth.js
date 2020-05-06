@@ -10,11 +10,12 @@ const signup = async (req, res, next) =>{
     const user = new User({username: username});
     await user.setPassword(password);
     await user.save().then(result => {
-        console.log(result._id);
+        //console.log(result._id);
+
         //token toekennen
         let token = jwt.sign({
-            uid:result._id,
-            username: username
+            uid: result._id,
+            username: result.username
         }, "MyVerySecretWord"); //hardcoded-> nog te vervangen 
 
         res.json({
@@ -32,10 +33,21 @@ const signup = async (req, res, next) =>{
 
 const login = async (req, res, next) => {
     const user = await User.authenticate()(req.body.username, req.body.password).then(result => {
-        res.json({
+        if(!result.user){
+            return res.json({
+                "status" : "failed",
+                "message": "Login failed"
+            })
+        }
+        let token = jwt.sign({
+            uid:result.user._id,
+            username:result.user.username
+        }, "MyVerySecretWord");
+         
+        return res.json({
             "status":"succes",
             "data":{
-                "user": result 
+                "token": token 
             }
         });
     }).catch(error => {
