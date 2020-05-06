@@ -15,5 +15,11 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
         })
     }).then(response => {
         return response.json();
+    }).then(json => {
+        if (json.status ==="succes"){
+            let token = json.data.token;
+            localStorage.setItem("token", token);
+            window.location.href = "/views/index.pug";
+        }
     })
 });
