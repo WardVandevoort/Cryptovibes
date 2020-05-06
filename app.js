@@ -9,6 +9,7 @@ const usersRouter = require('./routes/users');
 const apiTransactionsRouter = require("./routes/api/v1/cryptovibes");
 
 const mongoose = require('mongoose');
+mongoose.set('useCreateIndex', true); //warning nieuwe syntax oplossen, laten staan
 mongoose.connect('mongodb+srv://Ward:Ward@cluster0-4jxji.mongodb.net/test?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
