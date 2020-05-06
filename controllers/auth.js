@@ -1,7 +1,7 @@
 const User = require('../models/User');
 
 const signup = async (req, res, next) =>{
-console.log(req.body);
+    console.log(req.body);
 
     let username = req.body.username; //uit postman momenteel
     let password = req.body.password;
