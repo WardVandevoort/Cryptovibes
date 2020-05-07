@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const Users = require('../models/Users');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
@@ -6,17 +7,23 @@ const config = require('config');
 const signup = async (req, res, next) =>{
     //console.log(req.body);
 
-    let user = new User();
+    let username = req.body.username;
+    let firstname = req.body.firstname;
+    let lastname = req.body.lastname;
+    let email = req.body.email;
+    let password = req.body.password;
+    let wallet = 100;
 
-    user.username =  req.body.username; 
-    user.firstname =  req.body.firstname;
-    user.lastname = req.body.lastname;
-    user.email = req.body.email;
-    user.password = req.body.password;
-    user.wallet = 100;
+    const user = new Users({
+        username: username, 
+        firstname: firstname, 
+        lastname: lastname,
+        email: email,
+        password: password,
+        wallet: wallet
+    });
 
-    await user.setPassword(password);
-    await user.save((err, doc) => {
+    user.save((err, doc) => {
         if(!err){
             res.json({
                 "status": "success",
@@ -25,7 +32,10 @@ const signup = async (req, res, next) =>{
                 }
             });
         }
-    }).then(result => {
+    });
+
+    await user.setPassword(password);
+    await user.save(req.body.username, req.body.firstname,req.body.lastname, req.body.email,req.body.password, 100 ).then(result => {
         //console.log(result._id);
 
         //token toekennen
@@ -36,8 +46,9 @@ const signup = async (req, res, next) =>{
 
         res.json({
             "status": "success",
-            "token": token
-            
+            "data": {
+                 "token": token
+            }
         })
     }).catch(error =>{
         res.json({
