@@ -35,7 +35,7 @@ const signup = async (req, res, next) =>{
     });
 
     await user.setPassword(password);
-    await user.save(req.body.username, req.body.firstname,req.body.lastname, req.body.email,req.body.password, 100 ).then(result => {
+    await user.save().then(result => {
         //console.log(result._id);
 
         //token toekennen
