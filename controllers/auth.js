@@ -23,9 +23,8 @@ const signup = async (req, res, next) =>{
         password: password,
         wallet: wallet
     });
-   
-    await user.setPassword(password);
-    await user.save((err, doc) => {
+
+    user.save((err, doc) => {
         if(!err){
             res.json({
                 "status": "success",
@@ -34,10 +33,11 @@ const signup = async (req, res, next) =>{
                 }
             });
         }
-        
+    });
 
-    }).then(result => {
-        console.log(result._id);
+    await user.setPassword(password);
+    await user.save().then(result => {
+        //console.log(result._id);
 
         //token toekennen
         let token = jwt.sign({
