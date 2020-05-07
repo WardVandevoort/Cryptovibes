@@ -58,7 +58,7 @@ const transaction = (req, res, next) => {
     });
 }
 
-const users = (req, res, next) => {
+/*const users = (req, res, next) => {
     let users = new Users();
     users.firstname = req.body.firstname;
     users.lastname = req.body.lastname;
@@ -82,7 +82,7 @@ const users = (req, res, next) => {
             });
         }
     });
-}
+}*/
 
 const getUsers = (req, res) => {
     console.log("werkt");
@@ -108,4 +108,4 @@ module.exports.getTransactions = getTransactions;
 module.exports.getTransaction = getTransaction;
 module.exports.transaction = transaction;
 module.exports.getUsers = getUsers;
-module.exports.users = users;
+//module.exports.users = users;

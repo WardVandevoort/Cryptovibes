@@ -31,5 +31,4 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
             window.location.href = "/views/index.pug";
         }
     })
-    console.log(btnSignup);
 });

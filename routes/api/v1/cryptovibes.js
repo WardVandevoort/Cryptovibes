@@ -11,7 +11,7 @@ router.get('/getUsers', transactionsController.getUsers);
 
 router.get('/:id', transactionsController.getTransaction);
 
-router.post('/newUser', transactionsController.users);
+//router.post('/newUser', transactionsController.users);
 
 module.exports = router;
 
