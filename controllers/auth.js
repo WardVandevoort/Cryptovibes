@@ -12,7 +12,7 @@ const signup = async (req, res, next) =>{
     let lastname = req.body.lastname;
     let email = req.body.email;
     let password = req.body.password;
-    let wallet = req.body.wallet;
+    let wallet = 100;
 
 
     const user = new User({
