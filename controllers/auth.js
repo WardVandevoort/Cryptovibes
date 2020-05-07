@@ -14,7 +14,9 @@ const signup = async (req, res, next) =>{
     user.email = req.body.email;
     user.password = req.body.password;
     user.wallet = 100;
-    user.save((err, doc) => {
+
+    await user.setPassword(password);
+    await user.save((err, doc) => {
         if(!err){
             res.json({
                 "status": "success",
@@ -23,10 +25,7 @@ const signup = async (req, res, next) =>{
                 }
             });
         }
-    });
-
-    await user.setPassword(password);
-    await user.save().then(result => {
+    }).then(result => {
         //console.log(result._id);
 
         //token toekennen
