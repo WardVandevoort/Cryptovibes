@@ -25,19 +25,29 @@ const signup = async (req, res, next) =>{
     });
    
     await user.setPassword(password);
-    await user.save(err, doc).then(result => {
+    await user.save((err, doc) => {
+        if(!err){
+            res.json({
+                "status": "success",
+                "data": {
+                    "userdata": doc,
+                }
+            });
+        }
+        
+
+    }).then(result => {
         console.log(result._id);
 
         //token toekennen
         let token = jwt.sign({
             uid: result._id,
-            username: result.username
+            //username: result.username
         }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
 
         res.json({
             "status": "success",
             "data": {
-                 "userdata": doc,
                  "token": token
             }
         })
