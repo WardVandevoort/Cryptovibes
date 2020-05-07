@@ -52,16 +52,16 @@ const signup = async (req, res, next) =>{
 const login = async (req, res, next) => {
 
 
-    const user = await User.authenticate()(req.body.email, req.body.password).then(result => {
-        if(!result.user){
+    const user = await User.authenticate()(req.body.email, req.body.password).then(user => {
+        if(!user){
             return res.json({
                 "status" : "failed",
                 "message": "Login failed"
             })
         }
         let token = jwt.sign({
-            uid:result.user._id,
-            username:result.user.username
+            uid:user._id,
+            username:user.username
         }, config.get('jwt.secret'));
          
         return res.json({
