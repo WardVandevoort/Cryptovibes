@@ -6,14 +6,12 @@ const config = require('config');
 const signup = async (req, res, next) =>{
     //console.log(req.body);
 
-    //uit postman momenteel
     let username = req.body.username;
     let firstname = req.body.firstname;
     let lastname = req.body.lastname;
     let email = req.body.email;
     let password = req.body.password;
     let wallet = 100;
-
 
     const user = new User({
         username: username, 
@@ -36,13 +34,13 @@ const signup = async (req, res, next) =>{
     });
 
     await user.setPassword(password);
-    await user.save().then(result => {
+    await user.save(req.body.username, req.body.firstname,req.body.lastname, req.body.email,req.body.password, 100 ).then(result => {
         //console.log(result._id);
 
         //token toekennen
         let token = jwt.sign({
             uid: result._id,
-            //username: result.username
+            username: result.username
         }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
 
         res.json({
