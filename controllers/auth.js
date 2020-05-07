@@ -29,8 +29,8 @@ const signup = async (req, res, next) =>{
         if(!err){
 
             let token = jwt.sign({
-                uid: user.result._id,
-                username: user.result.username
+                uid: user._id,
+                username: user.username
             }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
 
             res.json({
