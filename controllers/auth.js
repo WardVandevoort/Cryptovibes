@@ -24,12 +24,13 @@ const signup = async (req, res, next) =>{
     });
 
     await user.setPassword(password);
-    await user.save((err, doc) => {
+
+    user.save((err, doc) => {
         if(!err){
 
             let token = jwt.sign({
-                uid: result._id,
-                username: result.username
+                uid: user.result._id,
+                username: user.result.username
             }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
 
             res.json({
