@@ -6,12 +6,16 @@ const config = require('config');
 const signup = async (req, res, next) =>{
     //console.log(req.body);
 
-    let username = req.body.username; //uit postman momenteel
-    let password = req.body.password;
-
-    const user = new User({username: username});
+    //uit postman momenteel
+    
+    const user = new User();
+    user.username = req.body.username;
+    user.firstname = req.body.firstname;
+    user.lastname = req.body.lastname;
+    user.email = req.body.email;
+    user.wallet = req.body.wallet;
     await user.setPassword(password);
-    await user.save().then(result => {
+    await user.save(err, doc).then(result => {
         //console.log(result._id);
 
         //token toekennen
@@ -23,6 +27,7 @@ const signup = async (req, res, next) =>{
         res.json({
             "status": "success",
             "data": {
+                 "userdata": doc,
                  "token": token
             }
         })
