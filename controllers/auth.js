@@ -6,44 +6,14 @@ const config = require('config');
 const signup = async (req, res, next) =>{
     //console.log(req.body);
 
-    let username = req.body.username;
-    let firstname = req.body.firstname;
-    let lastname = req.body.lastname;
-    let email = req.body.email;
-    let password = req.body.password;
-    let wallet = 100;
+    let user = new User();
 
-    const user = new User({
-        username: username, 
-        firstname: firstname, 
-        lastname: lastname,
-        email: email,
-        password: password,
-        wallet: wallet
-    });
-
-    await user.setPassword(password);
-    await user.save(req.body.username, req.body.firstname,req.body.lastname, req.body.email,req.body.password, 100 ).then(result => {
-        //console.log(result._id);
-
-        //token toekennen
-        let token = jwt.sign({
-            uid: result._id,
-            username: result.username
-        }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
-
-        res.json({
-            "status": "success",
-            "data": {
-                 "token": token
-            }
-        })
-    }).catch(error =>{
-        res.json({
-            "status": "error"
-        })
-    });
-
+    user.username =  req.body.username; 
+    user.firstname =  req.body.firstname;
+    user.lastname = req.body.lastname;
+    user.email = req.body.email;
+    user.password = req.body.password;
+    user.wallet = 100;
     user.save((err, doc) => {
         if(!err){
             res.json({
@@ -54,6 +24,28 @@ const signup = async (req, res, next) =>{
             });
         }
     });
+
+    await user.setPassword(password);
+    await user.save().then(result => {
+        //console.log(result._id);
+
+        //token toekennen
+        let token = jwt.sign({
+            uid: result._id,
+            username: result.username
+        }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
+
+        res.json({
+            "status": "success",
+            "token": token
+            
+        })
+    }).catch(error =>{
+        res.json({
+            "status": "error"
+        })
+    });
+
 };
 
 const login = async (req, res, next) => {
