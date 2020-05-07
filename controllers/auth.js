@@ -24,17 +24,6 @@ const signup = async (req, res, next) =>{
         wallet: wallet
     });
 
-    user.save((err, doc) => {
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "userdata": doc,
-                }
-            });
-        }
-    });
-
     await user.setPassword(password);
     await user.save().then(result => {
         //console.log(result._id);
@@ -42,7 +31,7 @@ const signup = async (req, res, next) =>{
         //token toekennen
         let token = jwt.sign({
             uid: result._id,
-            //username: result.username
+            username: result.username
         }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
 
         res.json({
@@ -55,6 +44,17 @@ const signup = async (req, res, next) =>{
         res.json({
             "status": "error"
         })
+    });
+
+    user.save((err, doc) => {
+        if(!err){
+            res.json({
+                "status": "success",
+                "data": {
+                    "userdata": doc,
+                }
+            });
+        }
     });
 };
 
