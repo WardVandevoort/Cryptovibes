@@ -7,21 +7,14 @@ const config = require('config');
 const signup = async (req, res, next) =>{
     //console.log(req.body);
 
-    let username = req.body.username;
-    let firstname = req.body.firstname;
-    let lastname = req.body.lastname;
-    let email = req.body.email;
-    let password = req.body.password;
-    let wallet = 100;
+    const user = new Users();
 
-    const user = new Users({
-        username: username, 
-        firstname: firstname, 
-        lastname: lastname,
-        email: email,
-        password: password,
-        wallet: wallet
-    });
+    user.username = req.body.username;
+    user.firstname = req.body.firstname;
+    user.lastname = req.body.lastname;
+    user.email = req.body.email;
+    user.password = req.body.password;
+    uers.wallet = 100;
 
     await user.setPassword(password);
     await user.save((err, doc) => {
