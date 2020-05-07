@@ -23,7 +23,7 @@ passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
         _id: jwt_payload.uid
     }, function(err, user) {
         if (err) {
-            window.location.href = "login.pug";
+            
             return done(err, false);
         }
         if (user) {
