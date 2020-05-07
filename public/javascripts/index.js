@@ -1,4 +1,4 @@
-fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/getUsers", {
+fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes", {
      'headers': {
           'Authorization': 'Bearer' + localstorage.getItem('token')
      }
