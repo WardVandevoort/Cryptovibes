@@ -1,5 +1,5 @@
 const User = require('../models/User');
-const Users = require('../models/Users');
+//const Users = require('../models/Users');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
@@ -14,7 +14,7 @@ const signup = async (req, res, next) =>{
     let password = req.body.password;
     let wallet = 100;
 
-    const user = new Users({
+    const user = new User({
         username: username, 
         firstname: firstname, 
         lastname: lastname,
