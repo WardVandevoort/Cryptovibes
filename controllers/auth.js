@@ -8,12 +8,13 @@ const signup = async (req, res, next) =>{
 
     //uit postman momenteel
     
-    const user = new User();
     user.username = req.body.username;
     user.firstname = req.body.firstname;
     user.lastname = req.body.lastname;
     user.email = req.body.email;
     user.wallet = req.body.wallet;
+    const user = new User();
+    
     await user.setPassword(password);
     await user.save(err, doc).then(result => {
         //console.log(result._id);
