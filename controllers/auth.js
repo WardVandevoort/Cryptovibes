@@ -55,7 +55,7 @@ const login = async (req, res, next) => {
     let password = req.body.password;
 
     const user = await User.authenticate()(email, password).then(user => {
-        if(!user){
+        if(!user.result){
             return res.json({
                 "status" : "failed",
                 "message": "Login failed"
