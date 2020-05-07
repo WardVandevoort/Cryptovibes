@@ -52,7 +52,7 @@ const signup = async (req, res, next) =>{
 const login = async (req, res, next) => {
 
 
-    const user = await User.authenticate()(req.body.email, req.body.password).then(user => {
+    const user = await User.authenticate()(req.body.email, req.body.password).then( () => {
         if(!user){
             return res.json({
                 "status" : "failed",
