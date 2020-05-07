@@ -23,7 +23,7 @@ passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
         _id: jwt_payload.uid
     }, function(err, user) {
         if (err) {
-            console.log("foute token!!!");
+            res.writeHead({ "Location": "https://cryptovibes.herokuapp.com/users/login" });
             return done(err, false);
         }
         if (user) {
