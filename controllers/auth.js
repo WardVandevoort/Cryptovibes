@@ -50,33 +50,35 @@ const signup = async (req, res, next) =>{
 };
 
 const login = async (req, res, next) => {
+    const user = await User.authenticate()(req.body.username, req.body.password).then(result => {
 
 
-    const user = await User.authenticate()(req.body.email, req.body.password).then( () => {
-        if(!user){
+        if (!result.user) {
             return res.json({
-                "status" : "failed",
+                "status": "failed",
                 "message": "Login failed"
             })
         }
+
         let token = jwt.sign({
-            uid:user._id,
-            username:user.username
+            uid: result.user._id,
+            username: result.user.username
         }, config.get('jwt.secret'));
-         
+
         return res.json({
-            "status":"succes",
-            "data":{
-                "token": token 
+            "status": "success",
+            "data": {
+                "token": token
             }
         });
     }).catch(error => {
         res.json({
-            "status":"error",
+            "status": "error",
             "message": error
         })
     });
-}
+};
+
 
 module.exports.signup = signup;
 module.exports.login = login;
