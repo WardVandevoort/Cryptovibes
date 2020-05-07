@@ -50,6 +50,10 @@ const signup = async (req, res, next) =>{
 };
 
 const login = async (req, res, next) => {
+
+    let email = req.body.email;
+    let password = req.body.password;
+
     const user = await User.authenticate()(email, password).then(result => {
         if(!result.user){
             return res.json({
