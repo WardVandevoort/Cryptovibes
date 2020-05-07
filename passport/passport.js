@@ -23,8 +23,8 @@ passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
         _id: jwt_payload.uid
     }, function(err, user) {
         if (err) {
-            
-            return res.redirect("https://cryptovibes.herokuapp.com/users/login");
+            res.redirect("/login");
+            return done(err, false);
         }
         if (user) {
             return done(null, user);
