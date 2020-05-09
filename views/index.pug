@@ -1,6 +1,12 @@
-extends layout
-
-block content
-  h1= Cryptovibes
-  p Welcome to #{title}
-  script(src='/javascripts/index.js')
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    section
+    h1= Cryptovibes
+    p Welcome to #{title}
+    script(src='/javascripts/index.js')

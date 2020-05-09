@@ -1,4 +1,5 @@
 console.log("ik werk");
+alert("ik werk");
 fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes", {
      'headers': {
           'Authorization': 'Bearer' + localstorage.getItem('token')
