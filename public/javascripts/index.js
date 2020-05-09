@@ -1,5 +1,4 @@
-const passport = require('./passport/passport');
-passport.authenticate('jwt', { session: false });
+
 console.log("ik werk");
 alert("ik werk");
 fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes", {
