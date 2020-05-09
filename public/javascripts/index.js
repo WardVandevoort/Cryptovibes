@@ -1,6 +1,5 @@
 
-console.log("ik werk");
-fetch("https://cryptovibes.herokuapp.com/auth", {
+fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes", {
      'headers': {
           'Authorization': 'Bearer' + localStorage.getItem('token')
      }
@@ -9,6 +8,5 @@ fetch("https://cryptovibes.herokuapp.com/auth", {
 }).then(json => {
      console.log(json);
 }).catch(err => {
-     console.log("foute token");
      window.location.href = "https://cryptovibes.herokuapp.com/users/login";
 })
