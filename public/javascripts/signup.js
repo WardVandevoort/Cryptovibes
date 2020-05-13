@@ -9,7 +9,7 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
     let validEmail = email.indexOf("@student.thomasmore.be");
 
     if(validEmail != -1){
-        username = email.slice(0, validEmail-1);
+        username = email.slice(0, validEmail);
 
         fetch(base_url + 'users/signup', {
             method: "post",
