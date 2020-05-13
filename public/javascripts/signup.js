@@ -8,7 +8,7 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
     let password = document.querySelector('#password').value;
 
 
-    fetch(base_url + '../../routes/users/signup', {
+    fetch(base_url + 'users/signup', {
         method: "post",
         headers: {
             'Content-Type': 'application/json'
@@ -25,10 +25,10 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
     }).then(response => {
         return response.json();
     }).then(json => {
-        if (json.status ==="succes"){
+        if (json.status ==="success"){
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = "/views/index.pug";
+            window.location.href = base_url;
         }
     })
 });
