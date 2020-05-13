@@ -9,21 +9,26 @@ head
   section.signup
     .container
       .signup-content
-          h2.form-title Register for an account
+          h2 Register for an account
           h3.emailValidation.err.hidden You need to sign up with a valid student email. A valid student email ends with "@student.thomasmore.be".
-          .form-group
-            input#firstname.form-input(type='text' name='name' placeholder='Your Firstame')
-          .form-group
-            input#lastname.form-input(type='text' name='name' placeholder='Your Lastname')
-          .form-group
-            input#email.form-input(type='email' name='email' placeholder='Your Email ending with "@student.thomasmore.be"')
-          .form-group
-            input#password.form-input(type='password' name='password' placeholder='Password')
+          div
+            label(for='firstname') Firstname
+            input#firstname(type='text' name='firstname' placeholder='John')
+          div
+            label(for='lastname') Lastname
+            input#lastname(type='text' name='lastname' placeholder='Doe')
+          div
+            label(for='email') Email
+            input#email(type='email' name='email' placeholder='john.doe@student.thomasmore.be')
+          div
+            label(for='password') Password
+            input#password(type='password' name='password')
             span.zmdi.zmdi-eye.field-icon.toggle-password(toggle='#password')
-          .form-group
-            input#re_password.form-input(type='password' name='re_password' placeholder='Repeat your password')
-          .form-group
-            button#submit.form-submit Register
+          div
+            label(for='re_password') Confirm password
+            input#re_password(type='password' name='re_password')
+          div
+            button#submit Register
         p.loginhere
           | Already have an account ? 
           a.loginhere-link(href='https://cryptovibes.herokuapp.com/login') Login here
