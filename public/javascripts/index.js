@@ -8,5 +8,8 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/", {
 }).then(json => {
      console.log(json);
 }).catch(err => {
+     res.json({
+          "status": "error"
+     })
      window.location.href = "https://cryptovibes.herokuapp.com/login";
 })
