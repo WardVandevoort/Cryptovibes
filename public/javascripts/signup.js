@@ -6,9 +6,36 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
     let lastname = document.querySelector('#lastname').value;
     let email = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
+    let re_password = document.querySelector("#re_password").value;
     let validEmail = email.indexOf("@student.thomasmore.be");
+    let validPassword;
+    let fieldsFilled;
+
+    if(password === re_password){
+        validPassword = true;
+    }
+    else{
+        validPassword = false;
+        document.querySelector(".passwordValidation").classList.remove("hidden");
+    }
+
+    if(firstname === '' || lastname === '' || email === '' || password === '' || re_password === ''){
+        fieldsFilled = false;
+        document.querySelector(".fieldValidation").classList.remove("hidden");
+    }
+    else{
+        fieldsFilled = true;
+    }
 
     if(validEmail != -1){
+        validEmail = true;
+    }
+    else{
+        validEmail = false;
+        document.querySelector(".emailValidation").classList.remove("hidden");
+    }
+
+    if(validEmail == true && validPassword == true && fieldsFilled == true){
         username = email.slice(0, validEmail);
 
         fetch(base_url + 'users/signup', {
@@ -36,10 +63,5 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
         })
 
     }
-    else{
-        document.querySelector(".emailValidation").classList.remove("hidden");
-    }
-
-
     
 });

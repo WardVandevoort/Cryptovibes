@@ -10,7 +10,9 @@ head
     .container
       .signup-content
           h2 Register for an account
-          h3.emailValidation.err.hidden You need to sign up with a valid student email. A valid student email ends with "@student.thomasmore.be".
+          p.emailValidation.err.hidden You need to sign up with a valid student email. A valid student email ends with "@student.thomasmore.be".
+          p.passwordValidation.err.hidden The passwords are not the same.
+          p.fieldValidation.err.hidden All fields need to be filled in.
           div
             label(for='firstname') Firstname
             input#firstname(type='text' name='firstname' placeholder='John')
@@ -22,11 +24,11 @@ head
             input#email(type='email' name='email' placeholder='john.doe@student.thomasmore.be')
           div
             label(for='password') Password
-            input#password(type='password' name='password')
+            input#password(type='password' name='password' placeholder='*******')
             span.zmdi.zmdi-eye.field-icon.toggle-password(toggle='#password')
           div
             label(for='re_password') Confirm password
-            input#re_password(type='password' name='re_password')
+            input#re_password(type='password' name='re_password' placeholder='*******')
           div
             button#submit Register
       p.loginhere
