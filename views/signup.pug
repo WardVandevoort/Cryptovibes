@@ -9,7 +9,6 @@ head
   section.signup
     .container
       .signup-content
-        form#signup-form.signup-form(method='POST')
           h2.form-title Register for an account
           h3.emailValidation.err.hidden You need to sign up with a valid student email. A valid student email ends with "@student.thomasmore.be".
           .form-group
@@ -24,7 +23,7 @@ head
           .form-group
             input#re_password.form-input(type='password' name='re_password' placeholder='Repeat your password')
           .form-group
-            input#submit.form-submit(type='submit' name='submit' value='Register')
+            button#submit.form-submit Register
         p.loginhere
           | Already have an account ? 
           a.loginhere-link(href='https://cryptovibes.herokuapp.com/login') Login here
