@@ -1,5 +1,5 @@
 
-fetch("https://cryptovibes.herokuapp.com/", {
+fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/", {
      'headers': {
           'Authorization': 'Bearer' + localStorage.getItem('token')
      }
