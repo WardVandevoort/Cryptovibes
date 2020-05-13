@@ -11,17 +11,10 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
     let validPassword;
     let fieldsFilled;
 
-    if(password === re_password){
-        validPassword = true;
-    }
-    else{
-        validPassword = false;
-        document.querySelector(".passwordValidation").classList.remove("hidden");
-    }
-
     if(firstname === '' || lastname === '' || email === '' || password === '' || re_password === ''){
         fieldsFilled = false;
         document.querySelector(".fieldValidation").classList.remove("hidden");
+        return;
     }
     else{
         fieldsFilled = true;
@@ -33,6 +26,16 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
     else{
         validEmail = false;
         document.querySelector(".emailValidation").classList.remove("hidden");
+        return;
+    }
+
+    if(password === re_password){
+        validPassword = true;
+    }
+    else{
+        validPassword = false;
+        document.querySelector(".passwordValidation").classList.remove("hidden");
+        return;
     }
 
     if(validEmail == true && validPassword == true && fieldsFilled == true){
