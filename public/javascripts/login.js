@@ -16,7 +16,7 @@ var btnLogin = document.querySelector(".login_btn").addEventListener("click", (e
     }).then(response => {
         return response.json();
     }).then(json => {
-        if (json.status ==="succes"){
+        if (json.status ==="success"){
             let token = json.data.token;
             localStorage.setItem("token", token);
             window.location.href = base_url;
