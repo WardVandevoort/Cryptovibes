@@ -7,6 +7,8 @@ const cors = require('cors');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const loginRouter = require('./routes/loginRoute');
+const signupRouter = require('./routes/signupRoute');
+const transferRouter = require('./routes/transferRoute');
 const apiTransactionsRouter = require("./routes/api/v1/cryptovibes");
 const passport = require('./passport/passport');
 const config = require('config');
@@ -39,6 +41,8 @@ app.use(cors());
 app.use('/',indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
+app.use('/transfer', transferRouter);
 app.use("/api/v1/cryptovibes", passport.authenticate('jwt', { session: false }),apiTransactionsRouter);
 
 // catch 404 and forward to error handler
