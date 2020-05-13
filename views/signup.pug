@@ -11,6 +11,7 @@ head
       .signup-content
         form#signup-form.signup-form(method='POST')
           h2.form-title Register for an account
+          h3.emailValidation.err.hidden You need to sign up with a valid student email. A valid student email ends with "@student.thomasmore.be".
           .form-group
             input#firstname.form-input(type='text' name='name' placeholder='Your Firstame')
           .form-group
@@ -18,7 +19,7 @@ head
           .form-group
             input#email.form-input(type='email' name='email' placeholder='Your Email ending with "@student.thomasmore.be"')
           .form-group
-            input#password.form-input(type='text' name='password' placeholder='Password')
+            input#password.form-input(type='password' name='password' placeholder='Password')
             span.zmdi.zmdi-eye.field-icon.toggle-password(toggle='#password')
           .form-group
             input#re_password.form-input(type='password' name='re_password' placeholder='Repeat your password')

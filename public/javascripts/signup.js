@@ -36,6 +36,9 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
         })
 
     }
+    else{
+        document.querySelector(".emailValidation").classList.remove("hidden");
+    }
 
 
     
