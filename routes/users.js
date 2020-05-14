@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/signup',authController.signup);
-router.post('/login',authController.login);
+router.post('/userSignup',authController.signup);
+router.post('/userLogin',authController.login);
 
 router.get('/signup', function(req, res, next) {
   res.render('signup');
