@@ -1,26 +1,24 @@
 doctype html
-head
-  title Cryptovibes Transaction
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-	link(rel='stylesheet', href='/stylesheets/transfer.css')
-
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title = Cryptovibes
+    link(rel="stylesheet" href="../public/stylesheets/transfer.scss")
+body
 h1 Cryptovibes
-
-img(src='/public/images/logo.svg' alt='logo')
-
 #container.transaction
   form
     .transactionform
       .form
         select.receiver
-          option(selected='selected') Choose your receiver
+          option(selected='') Choose your receiver
           option(value='1') One
           option(value='2') Two
           option(value='3') Three
         br
         select.reason
-          option(selected='selected') Choose your reason
+          option(selected='') Choose your reason
           option(value='1') One
           option(value='2') Two
           option(value='3') Three
@@ -28,19 +26,14 @@ img(src='/public/images/logo.svg' alt='logo')
           option(value='5') Three
           option(value='6') Three
           option(value='7') Three
-
         .amount
           label(for='amount') Amount
-          input#field(type='text' name='amount')
-        
+          input#field(type='text' value='amount' required='')
         .message
           label(for='message') Message
-          input#field(type='text' name='message')
+          input#field(type='text' value='message' required='')
+      .submit_transaction
+        button.btn(type='submit') Transfer
+        
+script(src='../public/javascripts/transfer.js')
 
-      .submit
-        a.btn(href='#')
-          span.btn__text Transfer
-
-
-script(src='/public/javascripts/transfer.js')
-script(src='https://cryptovibes.herokuapp.com/primus/primus.js')
