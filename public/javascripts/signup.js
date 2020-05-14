@@ -19,7 +19,6 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
         document.querySelector(".passwordValidation").classList.remove("hidden");
         document.querySelector(".emailValidation").setAttribute("class", "hidden");
         document.querySelector(".fieldValidation").setAttribute("class", "hidden");
-        break;
     }
 
     if(validEmail != -1){
@@ -30,7 +29,6 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
         document.querySelector(".emailValidation").classList.remove("hidden");
         document.querySelector(".fieldValidation").setAttribute("class", "hidden");
         document.querySelector(".passwordValidation").setAttribute("class", "hidden");
-        break;
     }
 
     if(firstname === '' || lastname === '' || email === '' || password === '' || re_password === ''){
@@ -38,7 +36,6 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
         document.querySelector(".fieldValidation").classList.remove("hidden");
         document.querySelector(".passwordValidation").setAttribute("class", "hidden");
         document.querySelector(".emailValidation").setAttribute("class", "hidden");
-        break;
     }
     else{
         fieldsFilled = true;
