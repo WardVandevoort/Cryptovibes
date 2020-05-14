@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title = Cryptovibes
+    link(rel="stylesheet" href="../public/stylesheets/transfer.scss")
+body
+h1 Cryptovibes
+#container.transaction
+  form
+    .transactionform
+      .form
+        select.receiver
+          option(selected='') Choose your receiver
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+        br
+        select.reason
+          option(selected='') Choose your reason
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+          option(value='4') Three
+          option(value='5') Three
+          option(value='6') Three
+          option(value='7') Three
+        .amount
+          label(for='amount') Amount
+          input#field(type='text' value='amount' required='')
+        .message
+          label(for='message') Message
+          input#field(type='text' value='message' required='')
+      .submit_transaction
+        button.btn(type='submit') Transfer
+        
+script(src='../public/javascripts/transfer.js')
+

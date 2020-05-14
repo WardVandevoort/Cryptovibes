@@ -4,7 +4,7 @@ const Users = require('../../../models/Users');
 let d = new Date();
 let Month = d.getMonth() + 1;
 
-
+//get alle transactions
 const getTransactions = (req, res) => {
     Transaction.find({$or:[{"receiver_id": "r0746456"}, {"sender_id": "r0746456"}]}, (err, docs) => {
         if(!err){
@@ -18,6 +18,7 @@ const getTransactions = (req, res) => {
     });
 }
 
+//get alle transactions per user
 const getTransaction = (req, res) => {
     Transaction.find({_id: req.params.id}, (err, doc) => {
         if(!err){
@@ -31,6 +32,7 @@ const getTransaction = (req, res) => {
     });
 }
 
+//doe nieuwe transfer
 const transaction = (req, res, next) => {
     let transaction = new Transaction();
     transaction.quantity = req.body.quantity;
