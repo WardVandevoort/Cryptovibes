@@ -1,11 +1,7 @@
 doctype html
-html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title = Cryptovibes
-    link(rel="stylesheet" href="../public/stylesheets/transfer.css")
-body
+head
+  title Cryptovibes Transaction
+  link(rel='stylesheet' href='stylesheets/transfer.css')
 h1 Cryptovibes
 #container.transaction
   form
@@ -32,8 +28,8 @@ h1 Cryptovibes
         .message
           label(for='message') Message
           input#field(type='text' value='message' required='')
-      .submit_transaction
-        button.btn(type='submit') Transfer
-        
+      .submit
+        button.btn(type='submit')
+          span.btn__text Transfer
 script(src='../javascripts/transfer.js')
 script(src='https://cryptovibes.herokuapp.com/primus/primus.js')
