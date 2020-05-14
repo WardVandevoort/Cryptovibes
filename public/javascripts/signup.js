@@ -11,15 +11,14 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
     let validPassword;
     let fieldsFilled;
 
-    if(firstname === '' || lastname === '' || email === '' || password === '' || re_password === ''){
-        fieldsFilled = false;
-        document.querySelector(".fieldValidation").classList.remove("hidden");
-        document.querySelector(".passwordValidation").setAttribute("class", "hidden");
-        document.querySelector(".emailValidation").setAttribute("class", "hidden");
-        return;
+    if(password === re_password){
+        validPassword = true;
     }
     else{
-        fieldsFilled = true;
+        validPassword = false;
+        document.querySelector(".passwordValidation").classList.remove("hidden");
+        document.querySelector(".emailValidation").setAttribute("class", "hidden");
+        document.querySelector(".fieldValidation").setAttribute("class", "hidden");
     }
 
     if(validEmail != -1){
@@ -30,18 +29,16 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
         document.querySelector(".emailValidation").classList.remove("hidden");
         document.querySelector(".fieldValidation").setAttribute("class", "hidden");
         document.querySelector(".passwordValidation").setAttribute("class", "hidden");
-        return;
     }
 
-    if(password === re_password){
-        validPassword = true;
+    if(firstname === '' || lastname === '' || email === '' || password === '' || re_password === ''){
+        fieldsFilled = false;
+        document.querySelector(".fieldValidation").classList.remove("hidden");
+        document.querySelector(".passwordValidation").setAttribute("class", "hidden");
+        document.querySelector(".emailValidation").setAttribute("class", "hidden");
     }
     else{
-        validPassword = false;
-        document.querySelector(".passwordValidation").classList.remove("hidden");
-        document.querySelector(".emailValidation").setAttribute("class", "hidden");
-        document.querySelector(".fieldValidation").setAttribute("class", "hidden");
-        return;
+        fieldsFilled = true;
     }
 
     if(validEmail == true && validPassword == true && fieldsFilled == true){
