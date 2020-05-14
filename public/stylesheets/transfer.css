@@ -93,6 +93,7 @@ h1{
   opacity: 0.55;
   box-shadow: 1px 1px 2px #6D9EB2;
   border-radius: 16px;
+  text-decoration: none;
 }
 
 .btn__text{
