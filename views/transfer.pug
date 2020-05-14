@@ -8,13 +8,13 @@ h1 Cryptovibes
     .transactionform
       .form
         select.receiver
-          option(selected='') Choose your receiver
+          option(selected='selected') Choose your receiver
           option(value='1') One
           option(value='2') Two
           option(value='3') Three
         br
         select.reason
-          option(selected='') Choose your reason
+          option(selected='selected') Choose your reason
           option(value='1') One
           option(value='2') Two
           option(value='3') Three
@@ -22,14 +22,19 @@ h1 Cryptovibes
           option(value='5') Three
           option(value='6') Three
           option(value='7') Three
+
         .amount
           label(for='amount') Amount
-          input#field(type='text' value='amount' required='')
+          input#field(type='number' name='amount')
+        
         .message
           label(for='message') Message
-          input#field(type='text' value='message' required='')
+          input#field(type='text' name='message')
+
       .submit
-        button.btn(type='submit')
+        a.btn(href='#')
           span.btn__text Transfer
+
+
 script(src='../javascripts/transfer.js')
 script(src='https://cryptovibes.herokuapp.com/primus/primus.js')
