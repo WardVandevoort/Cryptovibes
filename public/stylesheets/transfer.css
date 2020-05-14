@@ -3,6 +3,10 @@ body{
   width: 375px;
   height: 812px;
   background: #000000;
+  background-image: url("/public/images/logo.svg");
+  background-position: absolute;
+  height:223px;
+  width:auto;
 }
 
 h1{
@@ -13,12 +17,6 @@ h1{
   line-height: 43px;
   text-align: center;
   color: #72ADD1;
-}
-
-img{
-  position: absolute;
-  height:223px;
-  width:auto;
 }
 
 .transaction{
