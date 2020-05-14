@@ -64,7 +64,7 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
             if (json.status ==="success"){
                 let token = json.data.token;
                 localStorage.setItem("token", token);
-                window.location.href = base_url;
+                window.location.href = "index";
             }
         })
 

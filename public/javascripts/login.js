@@ -20,7 +20,7 @@ var btnLogin = document.querySelector(".login_btn").addEventListener("click", (e
         if (json.status ==="success"){
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = base_url;
+            window.location.href = "index";
         } else {
             let feedback = document.querySelector(".alarm");
             feedback.textContent = "Login failed 😢";
