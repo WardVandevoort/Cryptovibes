@@ -7,7 +7,7 @@ var btnTransfer = document.querySelector(".btn").addEventListener("click", (e)=>
     let quantity = document.querySelector('.amount').value;
     let message = document.querySelector('.message').value;
     
-    fetch(base_url + '/', {
+    fetch(base_url + 'transfer/', {
         method: "post",
         headers:{
             'Content-Type':'application/json'
