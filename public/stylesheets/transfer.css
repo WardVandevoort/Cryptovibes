@@ -30,6 +30,7 @@ h1{
   height: 20vh;
   width:auto;
   margin-left: 25%;
+  margin-bottom:5%;
   box-sizing: border-box;
 }
 
@@ -98,7 +99,7 @@ h1{
   text-align: center;
   color: #72ADD1;
   opacity: 0.55;
-  border: 0.2px;
+  border: 0.8px;
   width:200px;
   height:45px;
 }
@@ -116,7 +117,7 @@ h1{
   opacity: 0.55;
   box-shadow: 1px 1px 2px #6D9EB2;
   border-radius: 16px;
-  margin-left: -10%;
+  margin-left: -15%;
 }
 
 .btn__text{
