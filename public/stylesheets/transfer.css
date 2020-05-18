@@ -23,7 +23,7 @@ h1{
 .image{
   height: 250px;
   width:auto;
-  background-image: image('../../views/logo.png');
+  background-image: url('./logocrypto.svg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 20vh;
