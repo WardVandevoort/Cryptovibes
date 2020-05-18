@@ -11,7 +11,6 @@ const base_url ="https://cryptovibes.herokuapp.com/";
 document.querySelector(".btn").addEventListener("click", function (e) {
     const that = this;
     let receiver = document.querySelector('.receiver').value;
-    //let sender_id = document.querySelector('')
     let type = document.querySelector('.reason').value;
     let quantity = document.querySelector('.amount').value;
     let message = document.querySelector('.message').value;
