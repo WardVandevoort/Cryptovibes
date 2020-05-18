@@ -1,4 +1,4 @@
-const Transaction = require('../models/Transaction');
+const Transaction = require('../../../models/Transaction');
 
 let d = new Date();
 let Month = d.getMonth() + 1;
