@@ -20,6 +20,11 @@ h1{
   color: #72ADD1;
 }
 
+.image{
+  height: 250px;
+  width:auto;
+}
+
 .transaction{
   width: 282px;
   height: 269px;
