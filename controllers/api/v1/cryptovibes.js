@@ -58,38 +58,7 @@ const transaction = (req, res, next) => {
             });
         }
     });
-<<<<<<< HEAD
-} 
-=======
 }
->>>>>>> parent of 13efc28... tranfer rpoblems postman
-
-//gebruikers
-const getUsers = (req, res) => {
-    console.log("werkt");
-    Users.find({}, (err, docs) => {
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "users": docs
-                }
-            });
-        }
-        else{
-            res.json({
-                "status": "error",
-                "message": err
-            });
-        }
-    });
-}
-
-module.exports.getTransactions = getTransactions;
-module.exports.getTransaction = getTransaction;
-module.exports.transaction = transaction;
-module.exports.getUsers = getUsers;
-//module.exports.users = users;
 
 /*const users = (req, res, next) => {
     let users = new Users();
@@ -116,3 +85,29 @@ module.exports.getUsers = getUsers;
         }
     });
 }*/
+
+const getUsers = (req, res) => {
+    console.log("werkt");
+    Users.find({}, (err, docs) => {
+        if(!err){
+            res.json({
+                "status": "success",
+                "data": {
+                    "users": docs
+                }
+            });
+        }
+        else{
+            res.json({
+                "status": "error",
+                "message": err
+            });
+        }
+    });
+}
+
+module.exports.getTransactions = getTransactions;
+module.exports.getTransaction = getTransaction;
+module.exports.transaction = transaction;
+module.exports.getUsers = getUsers;
+//module.exports.users = users;
