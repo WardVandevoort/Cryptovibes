@@ -49,12 +49,12 @@ const createTransaction = (req, res, next) => {
 //get alle transactions
 const getTransactions = (req, res) => {
     Transaction.find({$or:[{"receiver_id": "r0746456"}, {"sender_id": "r0746456"}]}, (err, docs) => {
-        console.log("hello??");
+        //console.log("hello??");
         if(!err){
             res.json({
                 "status": "success",
                 "data": {
-                    "transactions": docs
+                    "transaction": docs
                 }
             });
         }
