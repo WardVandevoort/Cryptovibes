@@ -24,6 +24,7 @@ h1{
   height: 20vh;
   width:auto;
   box-sizing: border-box;
+  margin-left: 25%;
 }
 
 .transaction{
