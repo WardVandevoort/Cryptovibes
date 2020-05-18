@@ -5,7 +5,7 @@ let Month = d.getMonth() + 1;
 
 //get one transaction
 const getTransaction = (req, res) => {
-    Transaction.findOne({_id: req.params.id}, (err, doc) => {
+    Transaction.find({_id: req.params.id}, (err, doc) => {
         if(!err){
             res.json({
                 "status": "success",
