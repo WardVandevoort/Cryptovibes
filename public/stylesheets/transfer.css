@@ -33,8 +33,9 @@ h1{
   text-align: center;
 }
 
-.searchReceiver{
-  height: 22px;
+.receiverName{
+  width:200px;
+  height:45px;
   font-family: Industry;
   font-style: normal;
   font-weight: bold;
