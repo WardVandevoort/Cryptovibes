@@ -8,6 +8,7 @@ var btnTransfer = document.querySelector(".btn").addEventListener("click", (e)=>
     let message = document.querySelector('.message').value;
     
     fetch(base_url + './transfer', {
+        console.log("werkt!");
         method: "post",
         headers:{
             'Content-Type':'application/json'
