@@ -3,6 +3,12 @@ body{
   width: 375px;
   height: 812px;
   background: #000000;
+  background-image: url(../../views/logocrypto.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 h1{
