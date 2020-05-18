@@ -61,10 +61,6 @@ const getTransactions = (req, res) => {
     });
 }
 
-module.exports.getTransaction = getTransaction; //1
-module.exports.createTransaction = createTransaction; //+1
-module.exports.getTransactions = getTransactions; //alle
-
 const getUsers = (req, res) => {
     console.log("werkt");
     Users.find({}, (err, docs) => {
@@ -85,6 +81,9 @@ const getUsers = (req, res) => {
     });
 }
 
+module.exports.getTransaction = getTransaction; //1
+module.exports.createTransaction = createTransaction; //+1
+module.exports.getTransactions = getTransactions; //alle
 module.exports.getUsers = getUsers;
 
 /*const users = (req, res, next) => {
