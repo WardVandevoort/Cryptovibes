@@ -8,8 +8,7 @@ router.post('/', transactionsController.createTransaction);  //new transaction
 
 router.get('/', transactionsController.getTransactions);  //alle tranacties
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/transfer', function(req, res, next) {
   res.render('transfer');
 });
 
