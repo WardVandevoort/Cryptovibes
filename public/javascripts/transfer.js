@@ -1,12 +1,12 @@
 const base_url ="https://cryptovibes.herokuapp.com/";
 
-let primus = Primus.connect(base_url, {
+/* let primus = Primus.connect(base_url, {
     reconnect: {
         max: Infinity, 
         min: 500, 
         retries: 10 
     }
-});
+}); */
 
 document.querySelector(".btn").addEventListener("click", function (e) {
     const that = this;
