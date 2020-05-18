@@ -8,7 +8,7 @@ router.post('/', transactionsController.createTransaction);  //new transaction
 
 router.get('/', transactionsController.getTransactions);  //alle tranacties
 
-router.get('/transfer', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('transfer');
 });
 
