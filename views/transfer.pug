@@ -8,24 +8,14 @@ html(lang='en')
     title = Cryptovibes
 
 h1 Cryptovibes
-
 .image
-
 #container.transaction
   form
     .transactionform
       .form
-          input#receivername.receiver(type='text' placeholder='Enter username of receiver')
+        .searchReceiver
+          input.receiverName(type='text' placeholder='Enter username of receiver...')
           .matchUser
-        br
-        //select.reason
-          option(selected='selected') Choose your reason
-          option(value='1') Development help
-          option(value='2') Design help
-          option(value='3') Feedback
-          option(value='4') Meeting deadlines
-          option(value='5') Other
-
         .amount
           label(for='amount') Amount
           input#field(type='text' value='amount' placeholder='amount')
