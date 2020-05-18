@@ -54,7 +54,7 @@ const getTransactions = (req, res) => {
             res.json({
                 "status": "success",
                 "data": {
-                    "transaction": docs
+                    "transaction": doc
                 }
             });
         }
