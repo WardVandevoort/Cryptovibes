@@ -34,11 +34,10 @@ h1{
 }
 
 .receiverName{
-  width:200px;
+  width:250px;
   height:45px;
   font-family: Industry;
   font-style: normal;
-  font-weight: bold;
   font-size: 18px;
   line-height: 22px;
   color: #7FB3C9;
