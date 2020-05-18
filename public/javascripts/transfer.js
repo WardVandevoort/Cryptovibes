@@ -8,7 +8,7 @@ const base_url ="https://cryptovibes.herokuapp.com/";
     }
 }); */
 
-document.querySelector(".btn").addEventListener("click", function (e) {
+/* document.querySelector(".btn").addEventListener("click", function (e) {
     const that = this;
     let receiver = document.querySelector('.receiver').value;
     let type = document.querySelector('.reason').value;
@@ -18,4 +18,4 @@ document.querySelector(".btn").addEventListener("click", function (e) {
     fetch(base_url + 'transfer/',{
         
   });
-})
+}) */

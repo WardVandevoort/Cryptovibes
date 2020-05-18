@@ -3,13 +3,16 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const config = require('config');
+
 const cors = require('cors');
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const transferRouter = require('./routes/transfer');
+const transferRouter = require('./routes/api/v1/transfer');
 const apiTransactionsRouter = require("./routes/api/v1/cryptovibes");
+
 const passport = require('./passport/passport');
-const config = require('config');
 const mongoose = require('mongoose');
 
 mongoose.set('useCreateIndex', true); //warning nieuwe syntax oplossen, laten staan
