@@ -17,22 +17,6 @@ document.querySelector(".btn").addEventListener("click", function (e) {
     let message = document.querySelector('.message').value;
     
     fetch(base_url + 'transfer/',{
-        method: "post",
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({
-            receiver_id: receiver,
-            type_id: type,
-            quantity: quantity,
-            message: message
-        })
-    }).then((e) => {
-        if(e.status = 200) {
-           ({ receiver_id: receiver,
-                type_id: type,
-                quantity: quantity,
-                message: message })
-            alert("Transfer succeed");
-        }
-    });
-    e.preventDefault();
+        
   });
+})
