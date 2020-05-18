@@ -38,7 +38,6 @@ h1{
   height: 269px;
   text-align: center;
   align-content: center;
-  /* margin-left:20%; */
 }
 
 .receiver{
@@ -51,6 +50,7 @@ h1{
   color: #7FB3C9;
   background: #000000;
   border: 0px;
+  text-align:center;
 }
 
 .reason{
@@ -64,6 +64,7 @@ h1{
   border: 0px;
   margin-top:15px;
   margin-bottom:15px;
+  text-align:center;
 }
 
 .amount{
@@ -75,6 +76,7 @@ h1{
   color: #7FB3C9;
   border: 0px;
   margin-bottom:15px;
+  text-align:center;
 }
 
 .message{
@@ -86,6 +88,7 @@ h1{
   color: #7FB3C9;
   border: 0px;
   margin-bottom:15px;
+  text-align:center;
 }
 
 #field{
@@ -113,6 +116,7 @@ h1{
   opacity: 0.55;
   box-shadow: 1px 1px 2px #6D9EB2;
   border-radius: 16px;
+  margin-left: 10%;
 }
 
 .btn__text{
