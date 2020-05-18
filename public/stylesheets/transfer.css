@@ -27,6 +27,8 @@ h1{
   background-size: contain;
   background-repeat: no-repeat;
   height: 20vh;
+  width:auto;
+  margin-left: auto;
   box-sizing: border-box;
 }
 
