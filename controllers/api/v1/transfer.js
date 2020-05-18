@@ -39,7 +39,7 @@ const createTransaction = (req, res, next) => {
             res.json({
                 "status": "success",
                 "data": {
-                    "transactions": doc
+                    "transaction": doc
                 }
             });
         }
@@ -49,7 +49,6 @@ const createTransaction = (req, res, next) => {
 //get alle transactions
 const getTransactions = (req, res) => {
     Transaction.find({$or:[{"receiver_id": "r0123456"}, {"sender_id": "r0423168"}]}, (err, docs) => {
-        //console.log("hello??");
         if(!err){
             res.json({
                 "status": "success",
