@@ -23,6 +23,11 @@ h1{
 .image{
   height: 250px;
   width:auto;
+  background-image: url('../../views/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 20vh;
+  box-sizing: border-box;
 }
 
 .transaction{
