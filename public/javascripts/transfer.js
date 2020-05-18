@@ -1,27 +1,38 @@
 const base_url ="https://cryptovibes.herokuapp.com/";
 
-var btnTransfer = document.querySelector(".btn").addEventListener("click", (e)=>{
-    let receiver_id = document.querySelector('.receiver').value;
+let primus = Primus.connect(base_url, {
+    reconnect: {
+        max: Infinity, 
+        min: 500, 
+        retries: 10 
+    }
+});
+
+document.querySelector(".btn").addEventListener("click", function (e) {
+    const that = this;
+    let receiver = document.querySelector('.receiver').value;
     //let sender_id = document.querySelector('')
-    let type_id = document.querySelector('.reason').value;
+    let type = document.querySelector('.reason').value;
     let quantity = document.querySelector('.amount').value;
     let message = document.querySelector('.message').value;
     
-    fetch(base_url + './transfer', {
-        method: "post",
-        headers:{
-            'Content-Type':'application/json'
-        },
+    fetch(base_url + '/api/v1/cryptovibes', {
+        method: "put",
+        headers:{'Content-Type':'application/json'},
         body: JSON.stringify({
-            "receiver_id": receiver_id,
-            "type_id": type_id,
-            "quantity": quantity,
-            "message": message
+            receiver_id: receiver,
+            type_id: type,
+            quantity: quantity,
+            message: message
         })
-    }). then(response =>{
-        return response.json();
-    }).then(json => {
-        console.log(json);
-    })
-})
-
+    }).then((e) => {
+        if(e.status = 200) {
+            primus.write({ receiver_id: receiver,
+                type_id: type,
+                quantity: quantity,
+                message: message })
+            alert("Transfer succeed");
+        }
+    });
+    e.preventDefault();
+  });
