@@ -16,7 +16,7 @@ document.querySelector(".btn").addEventListener("click", function (e) {
     let quantity = document.querySelector('.amount').value;
     let message = document.querySelector('.message').value;
     
-    fetch(base_url + 'api/v1/cryptovibes', {
+    fetch(base_url + 'cryptovibes', {
         method: "post",
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({
