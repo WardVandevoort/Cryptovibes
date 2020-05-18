@@ -16,7 +16,7 @@ document.querySelector(".btn").addEventListener("click", function (e) {
     let quantity = document.querySelector('.amount').value;
     let message = document.querySelector('.message').value;
     
-    fetch(base_url + '/routes/transfer', {
+    fetch(base_url + 'routes/transfer', {
         method: "post",
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify({
@@ -27,7 +27,7 @@ document.querySelector(".btn").addEventListener("click", function (e) {
         })
     }).then((e) => {
         if(e.status = 200) {
-            primus.write({ receiver_id: receiver,
+           ({ receiver_id: receiver,
                 type_id: type,
                 quantity: quantity,
                 message: message })
