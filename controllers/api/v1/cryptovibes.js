@@ -58,7 +58,11 @@ const transaction = (req, res, next) => {
             });
         }
     });
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> parent of 13efc28... tranfer rpoblems postman
 
 //gebruikers
 const getUsers = (req, res) => {
