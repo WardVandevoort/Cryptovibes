@@ -7,11 +7,11 @@ router.get('/', function(req, res, next) {
     res.render('transfer');
   });
 
-router.post('/transaction', transactionsController.transaction);  //new transaction
+router.post('/', transactionsController.transaction);  //new transaction
 
-router.get('/transaction', transactionsController.getTransactions);  //alle transacties
+router.get('/', transactionsController.getTransactions);  //alle transacties
 
-router.get('/transaction/:id', transactionsController.getTransaction);  //krijg één transactie
+router.get('/:id', transactionsController.getTransaction);  //krijg één transactie
 
 router.get('/getUsers', transactionsController.getUsers);  //alle users
 
