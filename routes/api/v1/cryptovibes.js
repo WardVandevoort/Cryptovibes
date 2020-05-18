@@ -3,15 +3,14 @@ const router = express.Router();
 const transactionsController = require("../../../controllers/api/v1/cryptovibes");
 
 
-router.post('/', transactionsController.transaction);
+router.post('/transaction', transactionsController.transaction);  //new transaction
 
-router.get('/', transactionsController.getTransactions);
+router.get('/transaction', transactionsController.getTransactions);  //alle transacties
 
-router.get('/getUsers', transactionsController.getUsers);
+router.get('/transaction/:id', transactionsController.getTransaction);  //krijg één transactie
 
-router.get('/:id', transactionsController.getTransaction);
-
-//router.post('/newUser', transactionsController.users);
+router.get('/getUsers', transactionsController.getUsers);  //alle users
 
 module.exports = router;
 
+//router.post('/newUser', transactionsController.users);
