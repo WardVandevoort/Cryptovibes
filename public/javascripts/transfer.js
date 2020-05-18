@@ -8,7 +8,14 @@ const searchReceiver = async searchText =>{
     const res = await fetch (base_url + '/routes/users.js');
     const names = await res.json();
 
-    console.log(names);
-}
+    //console.log(names);
+
+    //get matches 
+    let matches = names.filter(name => {
+        const regex = new RegExp(`^${searchText}`, 'gi');
+        return name.name.match(regex) || name.abbr.match(regex);
+        console.log(names);
+    });
+};
 
 receivername.addEventListener('input',()=> searchReceiver(search.value));
