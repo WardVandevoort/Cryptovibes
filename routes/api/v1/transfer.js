@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const transactionsController = require("../../../controllers/api/v1/transfer");
+const transactionsController = require("../../../controllers/transfer");
 
 router.get('/:id', transactionsController.getTransaction);  //krijg één transactie
 
