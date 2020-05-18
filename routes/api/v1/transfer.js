@@ -10,7 +10,7 @@ router.get('/', transactionsController.getTransactions);  //alle tranacties
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('transfer');
+  res.render('transfer');
 });
 
 
