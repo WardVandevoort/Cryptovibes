@@ -6,7 +6,6 @@ body{
   background-image: url(./logocrypto.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
   height: 20vh;
   box-sizing: border-box;
 }
