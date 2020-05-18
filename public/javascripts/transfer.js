@@ -18,4 +18,4 @@ const searchReceiver = async searchText =>{
     });
 };
 
-receivername.addEventListener('input',searchReceiver(search.value));
+receivername.addEventListener('input',searchReceiver(receivername.value));
