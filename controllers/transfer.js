@@ -1,7 +1,6 @@
-//const Transaction = require('../../../models/Transaction');
-const Users = require('../../../models/Users');
+const Transaction = require('../../../models/Transaction');
 
-/* let d = new Date();
+let d = new Date();
 let Month = d.getMonth() + 1;
 
 //get alle transactions
@@ -58,57 +57,8 @@ const transaction = (req, res, next) => {
             });
         }
     });
-} */
-
-//gebruikers
-const getUsers = (req, res) => {
-    console.log("werkt");
-    Users.find({}, (err, docs) => {
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "users": docs
-                }
-            });
-        }
-        else{
-            res.json({
-                "status": "error",
-                "message": err
-            });
-        }
-    });
 }
 
-/* module.exports.getTransactions = getTransactions;
+module.exports.getTransactions = getTransactions;
 module.exports.getTransaction = getTransaction;
-module.exports.transaction = transaction; */
-module.exports.getUsers = getUsers;
-//module.exports.users = users;
-
-/*const users = (req, res, next) => {
-    let users = new Users();
-    users.firstname = req.body.firstname;
-    users.lastname = req.body.lastname;
-    users.email = req.body.email;
-    users.password = req.body.password;
-    users.wallet = req.body.wallet;
-    users.save((err, doc) => {
-        if(err){
-            res.json({
-                "status": "error",
-                "message": "Failed to save user"
-            });
-        }
-
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "user": doc
-                }
-            });
-        }
-    });
-}*/
+module.exports.transaction = transaction;
