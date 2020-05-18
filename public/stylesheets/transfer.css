@@ -36,7 +36,8 @@ h1{
   width: 282px;
   height: 269px;
   text-align: center;
-  margin-left:20%;
+  align-content: center;
+  /* margin-left:20%; */
 }
 
 .receiver{
