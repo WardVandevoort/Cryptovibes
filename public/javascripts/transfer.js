@@ -5,7 +5,7 @@ const matchUser = document.querySelector('.matchUser');
 
 //search receiver and filter it
 const searchReceiver = async searchText =>{
-    const res = await fetch (base_url + 'users');
+    const res = await fetch (base_url + 'user');
     const names = await res.json();
 
     console.log(names);
