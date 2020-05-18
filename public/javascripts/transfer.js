@@ -1,21 +1,14 @@
 const base_url ="https://cryptovibes.herokuapp.com/";
 
-/* let primus = Primus.connect(base_url, {
-    reconnect: {
-        max: Infinity, 
-        min: 500, 
-        retries: 10 
-    }
-}); */
+const receivername = document.querySelector('.receivername');
+const matchUser = document.querySelector('.matchUser');
 
-document.querySelector(".btn").addEventListener("click", function (e) {
-    const that = this;
-    let receiver = document.querySelector('.receiver').value;
-    let type = document.querySelector('.reason').value;
-    let quantity = document.querySelector('.amount').value;
-    let message = document.querySelector('.message').value;
-    
-    fetch(base_url + 'transfer/',{
-        
-  });
-})
+//search receiver and filter it
+const searchReceiver = async searchText =>{
+    const res = await fetch (base_url + 'users');
+    const names = await res.json();
+
+    console.log(names);
+}
+
+receivername.addEventListener('input',()=> searchReceiver(search.value));

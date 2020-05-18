@@ -15,27 +15,23 @@ h1 Cryptovibes
   form
     .transactionform
       .form
-        select.receiver
-          option(selected='selected') Choose your receiver
-          option(value='1') Jef
-          option(value='2') Two
-          option(value='3') Three
+          input#receivername.receiver(type='text' placeholder='Enter username of receiver')
+          .matchUser
         br
         select.reason
           option(selected='selected') Choose your reason
-          option(value='1') Design
-          option(value='2') Two
-          option(value='3') Three
-          option(value='4') Three
-          option(value='5') Three
-          option(value='6') Three
-          option(value='7') Three
+          option(value='1') Development help
+          option(value='2') Design help
+          option(value='3') Feedback
+          option(value='4') Meeting deadlines
+          option(value='5') Other
+
         .amount
           label(for='amount') Amount
-          input#field(type='text' value='amount' required='')
+          input#field(type='text' value='amount' placeholder='amount')
         .message
           label(for='message') Message
-          input#field(type='text' value='message' required='')
+          input#field(type='text' value='message' placeholder='message')
       .submit
         button.btn(type='submit')
           span.btn__text Transfer
