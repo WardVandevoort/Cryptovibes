@@ -1,7 +1,7 @@
-//const Transaction = require('../../../models/Transaction');
+const Transaction = require('../../../models/Transaction');
 const Users = require('../../../models/Users');
 
-/* let d = new Date();
+let d = new Date();
 let Month = d.getMonth() + 1;
 
 //get alle transactions
@@ -58,7 +58,7 @@ const transaction = (req, res, next) => {
             });
         }
     });
-} */
+} 
 
 //gebruikers
 const getUsers = (req, res) => {
@@ -81,9 +81,9 @@ const getUsers = (req, res) => {
     });
 }
 
-/* module.exports.getTransactions = getTransactions;
+module.exports.getTransactions = getTransactions;
 module.exports.getTransaction = getTransaction;
-module.exports.transaction = transaction; */
+module.exports.transaction = transaction;
 module.exports.getUsers = getUsers;
 //module.exports.users = users;
 
