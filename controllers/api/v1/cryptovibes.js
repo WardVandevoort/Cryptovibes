@@ -7,6 +7,7 @@ let Month = d.getMonth() + 1;
 //get alle transactions
 const getTransactions = (req, res) => {
     Transaction.find({$or:[{"receiver_id":req.user.receiver_id}, {"sender_id":req.user.sender_id}]}, (err, docs) => {
+        console.log("hello??");
         if(!err){
             res.json({
                 "status": "success",
