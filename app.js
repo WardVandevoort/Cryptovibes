@@ -9,7 +9,7 @@ const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const transferRouter = require('./routes/api/v1/transfer');
+const transferRouter = require('./routes/transfer');
 const apiTransactionsRouter = require("./routes/api/v1/cryptovibes");
 
 const passport = require('./passport/passport');
