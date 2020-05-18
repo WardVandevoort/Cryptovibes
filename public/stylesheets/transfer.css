@@ -16,7 +16,7 @@ h1{
   font-weight: 900;
   font-size: 36px;
   line-height: 43px;
-  text-align: center;
+  /* text-align: center; */
   color: #72ADD1;
   align-content: center;
 }
