@@ -1,11 +1,11 @@
 const base_url ="https://cryptovibes.herokuapp.com/";
 
-const receivername = document.querySelector('.receivername');
+const receivername = document.querySelector('.receiverName');
 const matchUser = document.querySelector('.matchUser');
 
 //search receiver and filter it
 const searchReceiver = async searchText =>{
-    const res = await fetch (base_url + '/routes/users.js');
+    const res = await fetch (base_url + '');
     const names = await res.json();
 
     //console.log(names);
@@ -18,4 +18,4 @@ const searchReceiver = async searchText =>{
     });
 };
 
-receivername.addEventListener('input',()=> searchReceiver(search.value));
+receivername.addEventListener('input',searchReceiver(search.value));
