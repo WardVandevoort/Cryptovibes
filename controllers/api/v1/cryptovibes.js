@@ -60,32 +60,7 @@ const transaction = (req, res, next) => {
     });
 }
 
-/*const users = (req, res, next) => {
-    let users = new Users();
-    users.firstname = req.body.firstname;
-    users.lastname = req.body.lastname;
-    users.email = req.body.email;
-    users.password = req.body.password;
-    users.wallet = req.body.wallet;
-    users.save((err, doc) => {
-        if(err){
-            res.json({
-                "status": "error",
-                "message": "Failed to save user"
-            });
-        }
-
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "user": doc
-                }
-            });
-        }
-    });
-}*/
-
+//gebruikers
 const getUsers = (req, res) => {
     console.log("werkt");
     Users.find({}, (err, docs) => {
@@ -111,3 +86,29 @@ module.exports.getTransaction = getTransaction;
 module.exports.transaction = transaction;
 module.exports.getUsers = getUsers;
 //module.exports.users = users;
+
+/*const users = (req, res, next) => {
+    let users = new Users();
+    users.firstname = req.body.firstname;
+    users.lastname = req.body.lastname;
+    users.email = req.body.email;
+    users.password = req.body.password;
+    users.wallet = req.body.wallet;
+    users.save((err, doc) => {
+        if(err){
+            res.json({
+                "status": "error",
+                "message": "Failed to save user"
+            });
+        }
+
+        if(!err){
+            res.json({
+                "status": "success",
+                "data": {
+                    "user": doc
+                }
+            });
+        }
+    });
+}*/
