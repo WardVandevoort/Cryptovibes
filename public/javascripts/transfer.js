@@ -16,7 +16,7 @@ const searchReceivers = async searchText => {
         return receiver.email.match(regex);
     });
 
-    console.log(matches);
+    //console.log(matches);
 
     if(searchText.length === 0){
         matches = [];
@@ -27,7 +27,7 @@ const searchReceivers = async searchText => {
 
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match =>`${match.receivername}`).join('');
+        const html = matches.map(match =>`${match.email}`).join('');
 
         matchUser.innerHTML= html; 
     }
