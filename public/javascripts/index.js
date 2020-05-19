@@ -5,11 +5,11 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
 ).then(result => {
      return result.json();
  }).then(json => {
-      console.log(json);
-      console.log(json.data);
-      console.log(json.data.transactions);
      json.data.transactions.forEach(transaction => {
           console.log(transaction);
+          console.log(transaction.receiver_id);
+          console.log(token);
+          console.log(token.username);
          if (transaction.receiver_id == token.username) {
              payment = `<div class="deposit ${transaction.receiver_id} ${token.username}">
              <p>Cryptocoin +${transaction.quantity}</p>
