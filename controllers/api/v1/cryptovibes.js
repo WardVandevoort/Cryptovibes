@@ -1,25 +1,4 @@
-const Users = require('../../../models/Users');
 const Transaction = require('../../../models/Transaction');
-
-const getUsers = (req, res) => {
-    //console.log("werkt");
-    Users.find({}, (err, docs) => {
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "users": docs
-                }
-            });
-        }
-        else{
-            res.json({
-                "status": "error",
-                "message": err
-            });
-        }
-    });
-}
 
 //get one transaction
 const getOneTransaction = (req, res) => {
@@ -81,8 +60,25 @@ const getTransactions = (req, res) => {
 module.exports.getOneTransaction = getOneTransaction; //1
 module.exports.createTransaction = createTransaction; //+1
 module.exports.getTransactions = getTransactions; //alle
-module.exports.getUsers = getUsers;
+//module.exports.getUsers = getUsers;
 
 
-//dlet d = new Date();
-//let Month = d.getMonth() + 1;
+/* const getUsers = (req, res) => {
+    //console.log("werkt");
+    Users.find({}, (err, docs) => {
+        if(!err){
+            res.json({
+                "status": "success",
+                "data": {
+                    "users": docs
+                }
+            });
+        }
+        else{
+            res.json({
+                "status": "error",
+                "message": err
+            });
+        }
+    });
+} */
