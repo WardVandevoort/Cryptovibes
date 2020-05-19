@@ -7,6 +7,8 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
  }).then(json => {
      json.data.transactions.forEach(transaction => {
           console.log(token);
+          console.log(token.username);
+          console.log(token.user.username);
           console.log(token.data);
           console.log(token.data.username);
           console.log(token.data.user.username);
