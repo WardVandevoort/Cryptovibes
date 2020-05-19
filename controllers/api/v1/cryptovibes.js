@@ -28,6 +28,7 @@ const createTransaction = (req, res, next) => {
     transaction.date = d.getDate() + "/" + Month + "/" + d.getFullYear() + "   " 
                        + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     transaction.type_id = req.body.type_id;
+    transaction.message = req.body.message;
     transaction.save((err, doc) => {
         if(err){
             res.json({
