@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../../models/User');
 const user = new User();
 let token = localStorage.getItem("token");
 
