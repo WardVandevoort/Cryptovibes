@@ -8,7 +8,7 @@ const searchReceivers = async searchText => {
     const res = await fetch ('../data/data.json');
     const names = await res.json();
 
-    //console.log(names);
+    console.log(names);
 
     //get matches 
     let matches = names.filter(name => {
