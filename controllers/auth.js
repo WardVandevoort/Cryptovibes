@@ -91,7 +91,7 @@ const getallUsers = (req,res ) =>{
             res.json({
                 "status": "success",
                 "data":{
-                    "users":docs
+                    "Users":docs
                 }
             })
         }
