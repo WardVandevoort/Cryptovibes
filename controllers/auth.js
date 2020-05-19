@@ -79,7 +79,7 @@ const login = async (req, res, next) => {
 };
 
 const getallUsers = (req,res ) =>{
-    User.find({}, (err,docs) =>{
+    Users.find({}, (err,docs) =>{
         if (err) {
           res.json({
             status: 'error',
