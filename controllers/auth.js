@@ -1,5 +1,5 @@
-//const User = require('../models/User');
-const Users = require('../models/User');
+const User = require('../models/User');
+//const Users = require('../models/Users');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
@@ -79,7 +79,7 @@ const login = async (req, res, next) => {
 };
 
 const getallUsers = (req,res ) =>{
-    Users.find({}, (err,docs) =>{
+    User.find({}, (err,docs) =>{
         if (err) {
           res.json({
             status: 'error',
