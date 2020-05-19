@@ -10,9 +10,9 @@ const searchReceivers = async searchText => {
 
     console.log(names);
 
-    //get matches 
+    /* //get matches 
     let matches = names.filter(name => {
-        const regex = new RegExp(`^${searchText}`, 'gi');
+        const regex = new RegExp(`^${searchText}`);
         return name.name.match(regex) || name.abbr.match(regex);
     });
 
@@ -20,7 +20,7 @@ const searchReceivers = async searchText => {
         matches = [];
         matchUser.innerHTML='';
     }
-    outputHtml(matches);
+    outputHtml(matches); */
 }
 
 const outputHtml = matches => {
