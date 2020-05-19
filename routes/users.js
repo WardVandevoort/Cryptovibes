@@ -4,7 +4,7 @@ const authController = require('../controllers/auth');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('users');
+  res.send('respond with a resource');
 });
 
 router.post('/signup',authController.signup);

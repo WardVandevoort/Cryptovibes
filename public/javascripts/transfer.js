@@ -3,7 +3,6 @@ const base_url ="localhost:3000/api/v1/cryptovibes/";
 const receivername = document.querySelector('.receiverName');
 const matchUser = document.querySelector('.matchUser');
 
-document.querySelector(".btn").addEventListener('click'), (e) => {
 //search receiver and filter it
 const searchReceivers = async searchText => {
     const res = await fetch ('../data/data.json');
@@ -35,7 +34,3 @@ const outputHtml = matches => {
 
 receivername.addEventListener('input',() => searchReceivers(receivername.value));
 
-
-e.preventDefault();
-    
-}
