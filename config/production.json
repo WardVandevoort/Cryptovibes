@@ -1,8 +1,8 @@
 {
-    //"Database":{
-        //"conn": "mongodb+srv://Ward:Ward@cluster0-4jxji.mongodb.net/test?retryWrites=true&w=majority"
+    "Database":{
+        "conn": "mongodb+srv://Ward:Ward@cluster0-4jxji.mongodb.net/test?retryWrites=true&w=majority"
     },
-    //"jwt": {
-        //"secret" : "MyVerySecretWord"
+    "jwt": {
+        "secret" : "MyVerySecretWord"
     }
 } 

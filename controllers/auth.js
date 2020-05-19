@@ -80,9 +80,15 @@ const login = async (req, res, next) => {
 
 const getallUsers = (req,res ) =>{
     Users.find({}, (err,docs) =>{
+        if (err) {
+          res.json({
+            status: 'error',
+            message: err.message,
+          })
+        }
         if(!err){
             res.json({
-                "status": "succes",
+                "status": "success",
                 "data":{
                     "users":docs
                 }
@@ -90,7 +96,6 @@ const getallUsers = (req,res ) =>{
         }
     })
 }
-
 module.exports.signup = signup;
 module.exports.login = login;
 module.exports.getallUsers = getallUsers;
