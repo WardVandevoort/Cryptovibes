@@ -6,14 +6,14 @@ const matchUser = document.querySelector('.matchUser');
 //search receiver and filter it
 const searchReceivers = async searchText => {
     const res = await fetch ('../data/data.json');
-    const names = await res.json();
+    const receivers = await res.json();
 
-    //console.log(names);
+    //console.log(receivers);
 
     //get matches 
-    let matches = names.filter(name => {
+    let matches = receivers.filter(receiver => {
         const regex = new RegExp(`^${searchText}`, 'gi');
-        return name.name.match(regex) || name.abbr.match(regex);
+        return receiver.email.match(regex) || receiver.abbr.match(regex);
     });
 
     console.log(matches);
@@ -22,10 +22,10 @@ const searchReceivers = async searchText => {
         matches = [];
         matchUser.innerHTML='';
     } */
-    //outputHtml(matches);
+    outputHtml(matches);
 }
 
-/* const outputHtml = matches => {
+const outputHtml = matches => {
     if(matches.length > 0){
         const html = matches.map(match =>`
         <div class="card">
@@ -34,6 +34,6 @@ const searchReceivers = async searchText => {
 
         matchUser.innerHTML= html; 
     }
-};*/
+};
 
 receivername.addEventListener('input',() => searchReceivers(receivername.value));
