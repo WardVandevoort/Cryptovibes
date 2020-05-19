@@ -45,6 +45,7 @@ app.use('/login', usersRouter);
 app.use('/signup', usersRouter);
 app.use('/transfer', transferRouter);
 app.use("/api/v1/cryptovibes", apiRoute);
+app.use("/api/v1/transactions", apiRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
