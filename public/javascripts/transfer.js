@@ -8,19 +8,21 @@ const searchReceivers = async searchText => {
     const res = await fetch ('../data/data.json');
     const names = await res.json();
 
-    console.log(names);
+    //console.log(names);
 
-    /* //get matches 
+    //get matches 
     let matches = names.filter(name => {
         const regex = new RegExp(`^${searchText}`);
         return name.name.match(regex) || name.abbr.match(regex);
     });
 
-    if(searchText.length === 0){
+    console.log(matches);
+
+    /* if(searchText.length === 0){
         matches = [];
         matchUser.innerHTML='';
-    }
-    outputHtml(matches); */
+    } */
+    outputHtml(matches);
 }
 
 const outputHtml = matches => {
