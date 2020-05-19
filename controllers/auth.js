@@ -87,6 +87,7 @@ const getallUsers = (req,res ) =>{
           })
         }
         if(!err){
+            console.log(docs)
             res.json({
                 "status": "success",
                 "data":{
