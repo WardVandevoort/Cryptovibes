@@ -23,8 +23,8 @@ const createTransaction = (req, res, next) => {
     let transaction = new Transaction();
 
     transaction.quantity = req.body.quantity;
-    transaction.receiver_id = req.body.receiver;
-    transaction.sender_id = req.user.sender_id;
+    transaction.receiver_id = req.body.receiver_id;
+    transaction.sender_id = req.body.sender_id;
     transaction.date = d.getDate() + "/" + Month + "/" + d.getFullYear() + "   " 
                        + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     transaction.type_id = req.body.type_id;
