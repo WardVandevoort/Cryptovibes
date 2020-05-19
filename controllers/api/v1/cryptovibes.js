@@ -1,4 +1,3 @@
-const Users = require('../../../models/Users');
 const Transaction = require('../../../models/Transaction');
 
 //dlet d = new Date();
@@ -61,30 +60,11 @@ const getTransactions = (req, res) => {
     });
 }
 
-const getUsers = (req, res) => {
-    console.log("werkt");
-    Users.find({}, (err, docs) => {
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "users": docs
-                }
-            });
-        }
-        else{
-            res.json({
-                "status": "error",
-                "message": err
-            });
-        }
-    });
-}
+
 
 module.exports.getOneTransaction = getOneTransaction; //1
 module.exports.createTransaction = createTransaction; //+1
 module.exports.getTransactions = getTransactions; //alle
-module.exports.getUsers = getUsers;
 
 /*const users = (req, res, next) => {
     let users = new Users();
