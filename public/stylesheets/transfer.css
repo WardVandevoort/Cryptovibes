@@ -15,6 +15,14 @@ h1{
   color: #72ADD1;
 }
 
+.matchUser{
+  font-family: Industry;
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #72ADD1;
+}
+
 .image{
   height: 250px;
   width:auto;
