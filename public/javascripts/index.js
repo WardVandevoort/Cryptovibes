@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const config = require('config');
 let token = localStorage.getItem("token");
 
 let payment;
@@ -8,7 +9,10 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
      return result.json();
  }).then(json => {
      json.data.transactions.forEach(transaction => {
-          jwt.decode(token);
+          
+          const userToken = token.split(' ');
+          const decoded = jwt.verify(userToken[1], config.get('jwt.secret'));
+          console.log(decoded);
           console.log(token);
           console.log(token.username);
           console.log(token.user.username);
