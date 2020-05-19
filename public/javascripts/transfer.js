@@ -13,7 +13,7 @@ const searchReceivers = async searchText => {
     //get matches 
     let matches = receivers.filter(receiver => {
         const regex = new RegExp(`^${searchText}`, 'gi');
-        return receiver.name.match(regex);
+        return receiver.email.match(regex);
     });
 
     console.log(matches);
