@@ -1,4 +1,4 @@
-const base_url = "http://localhost:3000/";
+/* const base_url = "http://localhost:3000/";
 
 var btnLogin = document.querySelector(".login_btn").addEventListener("click", (e) => {
     let username = document.querySelector('#email').value;
@@ -27,4 +27,4 @@ var btnLogin = document.querySelector(".login_btn").addEventListener("click", (e
             feedback.classList.remove('hidden'); 
         }
     })
-});
+}); */
