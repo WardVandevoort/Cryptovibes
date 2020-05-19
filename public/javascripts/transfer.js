@@ -5,7 +5,7 @@ const matchUser = document.querySelector('.matchUser');
 
 //search receiver and filter it
 const searchReceivers = async searchText => {
-    const res = await fetch ('../../data/data.json');
+    const res = await fetch ('../../data/data');
     const names = await res.json();
 
     //console.log(names);
@@ -21,7 +21,8 @@ const searchReceivers = async searchText => {
         matchUser.innerHTML='';
     }
     outputHtml(matches);
-};
+}
+
 const outputHtml = matches => {
     if(matches.length > 0){
         const html = matches.map(match =>`
