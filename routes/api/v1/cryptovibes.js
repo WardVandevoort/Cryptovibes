@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const transactionsController = require("../../../controllers/api/v1/cryptovibes");
-const userController = require('../controllers/api/v1/user');
+const userController = require('../../../controllers/api/v1/cryptovibes');
 
 router.get('/:id', transactionsController.getOneTransaction);  //get one transaction
 
