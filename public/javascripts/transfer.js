@@ -28,7 +28,7 @@ const searchReceivers = async searchText => {
 const outputHtml = matches => {
     if(matches.length > 0){
         const html = matches.map(match =>`
-        <div class="card">
+        <div class>
             <h4>${match.email}<span class="summary">${match.capital}</span></h4>
         </div>`).join('');
 
