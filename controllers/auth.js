@@ -79,6 +79,7 @@ const login = async (req, res, next) => {
 };
 
 const getallUsers = (req,res ) =>{
+    console.log(docs);
     User.find({}, (err,docs) =>{
         if (err) {
           res.json({
