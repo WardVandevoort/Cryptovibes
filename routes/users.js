@@ -3,7 +3,7 @@ var router = express.Router();
 const authController = require('../controllers/auth');
 
 /* GET users listing. */
-router.get('/users', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('users');
 });
 
