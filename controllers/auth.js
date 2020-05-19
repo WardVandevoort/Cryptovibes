@@ -1,4 +1,4 @@
-/* const User = require('../models/User');
+const User = require('../models/User');
 const Users = require('../models/Users');
 const jwt = require('jsonwebtoken');
 const config = require('config');
@@ -80,4 +80,4 @@ const login = async (req, res, next) => {
 
 
 module.exports.signup = signup;
-module.exports.login = login; */
+module.exports.login = login;
