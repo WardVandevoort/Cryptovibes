@@ -1,4 +1,4 @@
-const Transaction = require('../../../models/Transaction');
+/* const Transaction = require('../../../models/Transaction');
 
 //get one transaction
 const getOneTransaction = (req, res) => {
@@ -63,4 +63,4 @@ module.exports.getTransactions = getTransactions; //alle
 
 
 //dlet d = new Date();
-//let Month = d.getMonth() + 1;
+//let Month = d.getMonth() + 1; */
