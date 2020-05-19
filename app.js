@@ -12,6 +12,7 @@ const usersRouter = require('./routes/users');
 const transferRouter = require('./routes/transfer');
 const apiRoute = require("./routes/api/v1/cryptovibes");
 const apiRouteTransfer = require("./routes/api/v1/cryptovibes");
+const apiRouteUsers = require('./routes/api/v1/cryptovibes');
 
 const passport = require('./passport/passport');
 const mongoose = require('mongoose');
@@ -47,6 +48,7 @@ app.use('/signup', usersRouter);
 app.use('/transfer', transferRouter);
 app.use("/api/v1/cryptovibes", apiRoute);
 app.use("/api/v1/cryptovibes", apiRouteTransfer);
+app.use('/api/v1/cryptovibes', apiRouteUsers);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
