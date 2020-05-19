@@ -26,7 +26,7 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
  });
  
  
- //append a todo to the dom 
+ /*//append a todo to the dom 
  let appendPayment = (json) => {
      document.querySelector(".history").insertAdjacentHTML('afterend', payment);
- }
+ }*/
