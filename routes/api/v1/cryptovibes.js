@@ -7,11 +7,11 @@ const transactionsController = require("../../../controllers/api/v1/transactions
 
 router.get('/getUsers', userController.getUsers);  //all users
 
-route.get('/:id', transactionsController.getOneTransaction);  //get one transaction
+router.get('/:id', transactionsController.getOneTransaction);  //get one transaction
 
-route.post('/', transactionsController.createTransaction);  //new transaction
+router.post('/', transactionsController.createTransaction);  //new transaction
 
-route.get('/', transactionsController.getTransactions);  //all tranactions
+router.get('/', transactionsController.getTransactions);  //all tranactions
 
 module.exports = router;
 module.exports = route;
