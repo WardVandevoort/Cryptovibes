@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const authController = require('../controllers/auth');
-const userController = require('../../../controllers/api/v1/user');
+const userController = require('../controllers/api/v1/user');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
