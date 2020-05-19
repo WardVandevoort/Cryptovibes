@@ -13,7 +13,7 @@ const searchReceivers = async searchText => {
     //get matches 
     let matches = receivers.filter(receiver => {
         const regex = new RegExp(`^${searchText}`, 'gi');
-        return receiver.email.match(regex) || receiver.abbr.match(regex);
+        return receiver.email.match(regex);
     });
 
     console.log(matches);
@@ -29,7 +29,7 @@ const outputHtml = matches => {
     if(matches.length > 0){
         const html = matches.map(match =>`
         <div class="card">
-            <h4>${match.name} (${match.abbr}) <span class="summary">${match.capital}</span></h4>
+            <h4>${match.email}<span class="summary">${match.capital}</span></h4>
         </div>`).join('');
 
         matchUser.innerHTML= html; 
