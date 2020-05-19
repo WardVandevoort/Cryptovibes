@@ -1,0 +1,29 @@
+{
+  "name": "cryptovibes",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon ./bin/www"
+  },
+  "dependencies": {
+    "config": "^3.3.1",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "json-expression-eval": "^2.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "primus": "^7.3.4",
+    "pug": "2.0.0-beta11",
+    "ws": "^7.2.5"
+  },
+  "devDependencies": {}
+}
