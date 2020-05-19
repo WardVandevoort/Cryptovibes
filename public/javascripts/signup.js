@@ -1,4 +1,4 @@
-/* const base_url = "https://cryptovibes.herokuapp.com/";
+const base_url = "https://cryptovibes.herokuapp.com/";
 
 var btnSignup = document.querySelector("#submit").addEventListener("click", (e) => {
     let username;
@@ -71,4 +71,4 @@ var btnSignup = document.querySelector("#submit").addEventListener("click", (e) 
         
     }
     
-}); */
+});
