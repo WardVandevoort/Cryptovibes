@@ -1,5 +1,4 @@
-//import jwt_decode from 'jwt_decode';
-//const config = require('config');
+
 let token = localStorage.getItem("token");
 
 let payment;
@@ -10,16 +9,11 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
  }).then(json => {
      json.data.transactions.forEach(transaction => {
           let decoded = JSON.parse(atob(token.split('.')[1]));
-          /*const userToken = token.split(' ');
-          const decoded = jwt.verify(userToken[1], config.get('jwt.secret'));*/
-          //let decoded = jwt_decode(token);
+          let locate = decoded.indexOf("@student.thomasmore.be");
+          let tokenData = decoded.slice(0, locate);
+
           console.log(decoded);
-          console.log(token);
-          console.log(token.username);
-          console.log(token.user.username);
-          console.log(token.data);
-          console.log(token.data.username);
-          console.log(token.data.user.username);
+          console.log(tokenData);
          if (transaction.receiver_id == token.username) {
              payment = `<div class="deposit ${transaction.receiver_id} ${token.username}">
              <p>Cryptocoin +${transaction.quantity}</p>
