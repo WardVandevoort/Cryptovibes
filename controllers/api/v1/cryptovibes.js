@@ -1,5 +1,4 @@
 const Transaction = require('../../../models/Transaction');
-const Users = require('../../../models/Users');
 
 //get one transaction
 const getOneTransaction = (req, res) => {
@@ -58,20 +57,7 @@ const getTransactions = (req, res) => {
     });
 }
 
-const allUsers = (req,res ) =>{
-    Users.find({}, (err,docs) =>{
-        if(!err){
-            res.json({
-                "status": "succes",
-                "data":{
-                    "users":docs
-                }
-            })
-        }
-    })
-}
-
 module.exports.getOneTransaction = getOneTransaction; //1
 module.exports.createTransaction = createTransaction; //+1
 module.exports.getTransactions = getTransactions; //alle
-module.exports.allUsers = allUsers;
+
