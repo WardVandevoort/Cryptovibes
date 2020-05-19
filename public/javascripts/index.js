@@ -1,4 +1,4 @@
-const jwt = require('../../jsonwebtoken');
+const jwt = require('../../node_modules/jsonwebtoken');
 const config = require('config');
 let token = localStorage.getItem("token");
 
