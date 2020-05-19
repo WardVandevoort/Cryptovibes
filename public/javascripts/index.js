@@ -1,4 +1,7 @@
+const User = require('../models/User');
+const user = new User();
 let token = localStorage.getItem("token");
+
 let payment;
 
 fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
@@ -6,9 +9,10 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
      return result.json();
  }).then(json => {
      json.data.transactions.forEach(transaction => {
+          user = new User();
           console.log(token);
           //console.log(token.username);
-          console.log(token.user.email);
+          console.log(token.user.username);
           console.log(token.data);
           console.log(token.data.username);
           console.log(token.data.user.username);
