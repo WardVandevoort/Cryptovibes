@@ -1,18 +1,22 @@
-/*let token = localStorage.getItem("token");
+let token = localStorage.getItem("token");
+let payment;
 
 fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
 ).then(result => {
      return result.json();
  }).then(json => {
      json.data.transactions.forEach(transaction => {
-         if (transaction.receiver_id == ) {
-             var newTodo = `<div class="todo todo--completed">
-             <input data-id="${todo._id}" type="checkbox" class="todo__state">  
-             <div class="todo__text">${todo.text}</div>
-             <a class="todo__delete" href="#" data-id="${todo._id}">delete</a>
+         if (transaction.receiver_id == token.username) {
+             payment = `<div class="deposit">
+             <p>Cryptocoin +${transaction.quantity}</p>
              </div>`;
-         } 
-         document.querySelector(".todo__new ").insertAdjacentHTML('afterend', newTodo);
+          } 
+          else if(transaction.sender_id == token.username){
+               payment = `<div class="withdrawal">
+               <p>Cryptocoin -${transaction.quantity}</p>
+               </div>`;
+          }
+         document.querySelector(".history").insertAdjacentHTML('afterend', payment);
      });
  
  
@@ -23,11 +27,6 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
  
  
  //append a todo to the dom 
- let appendTodo = (json) => {
-     let todo = `<div class="todo">
-                     <input data-id="${json.data.todo._id}" type="checkbox" class="todo__state">  
-                     <div class="todo__text">${json.data.todo.text}</div>
-                     <a class="todo__delete" href="#" data-id="${json.data.todo._id}">delete</a>
-                 </div>`;
-     document.querySelector(".todo__new ").insertAdjacentHTML('afterend', todo);
- }*/
+ let appendPayment = (json) => {
+     document.querySelector(".history").insertAdjacentHTML('afterend', payment);
+ }
