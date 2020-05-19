@@ -10,7 +10,7 @@ const cors = require('cors');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const transferRouter = require('./routes/transfer');
-const apiTransactionsRouter = require("./routes/api/v1/transactions");
+//const apiTransactionsRouter = require("./routes/api/v1/transactions");
 const apiUserRouter = require("./routes/api/v1/cryptovibes");
 
 const passport = require('./passport/passport');
@@ -45,7 +45,7 @@ app.use('/users', usersRouter);
 app.use('/login', usersRouter);
 app.use('/signup', usersRouter);
 app.use('/transfer', transferRouter);
-app.use("/api/v1/transactions", apiTransactionsRouter);
+//app.use("/api/v1/transactions", apiTransactionsRouter);
 app.use("/api/v1/cryptovibes", apiUserRouter);
 
 
