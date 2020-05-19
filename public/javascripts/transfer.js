@@ -17,6 +17,6 @@ const searchReceivers = async searchText => {
     });
 
     console.log(names);
-};
+}
 
 receivername.addEventListener('input',searchReceivers(receivername.value));
