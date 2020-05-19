@@ -1,11 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const transactionsController = require("../../../controllers/api/v1/cryptovibes");
+const route = express.Router();
 
-router.get('/', transactionsController.getTransactions);
-router.get('/:id', transactionsController.getTransaction);
-router.post('/', transactionsController.transaction);
-router.get('/getUsers', transactionsController.getUsers);
-//router.post('/newUser', transactionsController.users);
+const userController = require('../../../controllers/api/v1/cryptovibes');
+const transactionsController = require("../../../controllers/api/v1/transactions");
+
+router.get('/getUsers', userController.getUsers);  //all users
+
+route.get('/:id', transactionsController.getOneTransaction);  //get one transaction
+
+route.post('/', transactionsController.createTransaction);  //new transaction
+
+route.get('/', transactionsController.getTransactions);  //all tranactions
 
 module.exports = router;
+module.exports = route;
+

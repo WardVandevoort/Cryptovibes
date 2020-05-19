@@ -4,7 +4,7 @@ const authController = require('../controllers/auth');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('users');
 });
 
 router.post('/signup',authController.signup);
@@ -17,5 +17,6 @@ router.get('/signup', function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render('login');
 });
+
 
 module.exports = router;
