@@ -12,7 +12,7 @@ const searchReceivers = async searchText => {
 
     //get matches 
     let matches = names.filter(name => {
-        const regex = new RegExp(`^${searchText}`);
+        const regex = new RegExp(`^${searchText}`, 'gi');
         return name.name.match(regex) || name.abbr.match(regex);
     });
 
@@ -22,10 +22,10 @@ const searchReceivers = async searchText => {
         matches = [];
         matchUser.innerHTML='';
     } */
-    outputHtml(matches);
+    //outputHtml(matches);
 }
 
-const outputHtml = matches => {
+/* const outputHtml = matches => {
     if(matches.length > 0){
         const html = matches.map(match =>`
         <div class="card">
@@ -34,7 +34,7 @@ const outputHtml = matches => {
 
         matchUser.innerHTML= html; 
     }
-};
+};*/
 
 
 
