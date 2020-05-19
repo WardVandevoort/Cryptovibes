@@ -1,5 +1,4 @@
-const User = require('../../models/User');
-const user = new User();
+const jwt = require('jsonwebtoken');
 let token = localStorage.getItem("token");
 
 let payment;
@@ -9,9 +8,9 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
      return result.json();
  }).then(json => {
      json.data.transactions.forEach(transaction => {
-          user = new User();
+          jwt.decode(token);
           console.log(token);
-          //console.log(token.username);
+          console.log(token.username);
           console.log(token.user.username);
           console.log(token.data);
           console.log(token.data.username);
