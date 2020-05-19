@@ -18,10 +18,10 @@ const searchReceivers = async searchText => {
 
     console.log(matches);
 
-    /* if(searchText.length === 0){
+    if(searchText.length === 0){
         matches = [];
         matchUser.innerHTML='';
-    } */
+    }
     outputHtml(matches);
 }
 
