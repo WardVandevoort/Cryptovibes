@@ -26,12 +26,8 @@ const searchReceivers = async searchText => {
 }
 
 const outputHtml = matches => {
-    option = document.createElement('option');
-    option.text = data[i].name;
-    option.value = data[i].abbreviation;
     if(matches.length > 0){
-        const html = matches.map(match =>`${dropdown.add(option)}${match.email}`).join('');
-
+        const html = matches.map(match =>`${match.email}`).join('');
         matchUser.innerHTML= html; 
     }
 };
