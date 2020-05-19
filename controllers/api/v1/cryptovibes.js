@@ -2,7 +2,7 @@ const Transaction = require('../../../models/Transaction');
 
 //get one transaction
 const getOneTransaction = (req, res) => {
-    Transaction.findOne({_id: req.params.id}, (err, doc) => {
+    Transaction.find({_id: req.params.id}, (err, doc) => {
         if(!err){
             res.json({
                 "status": "success",
@@ -60,25 +60,3 @@ const getTransactions = (req, res) => {
 module.exports.getOneTransaction = getOneTransaction; //1
 module.exports.createTransaction = createTransaction; //+1
 module.exports.getTransactions = getTransactions; //alle
-//module.exports.getUsers = getUsers;
-
-
-/* const getUsers = (req, res) => {
-    //console.log("werkt");
-    Users.find({}, (err, docs) => {
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "users": docs
-                }
-            });
-        }
-        else{
-            res.json({
-                "status": "error",
-                "message": err
-            });
-        }
-    });
-} */
