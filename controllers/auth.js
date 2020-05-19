@@ -1,62 +1,84 @@
 const User = require('../models/User');
+//const Users = require('../models/Users');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
+
 const signup = async (req, res, next) =>{
     //console.log(req.body);
-    let username = req.body.username; //uit postman momenteel
+
+    let username = req.body.username;
+    let firstname = req.body.firstname;
+    let lastname = req.body.lastname;
+    let email = req.body.email;
     let password = req.body.password;
+    let wallet = 100;
 
-    const user = new User({username: username});
+    const user = new User({
+        username: username, 
+        firstname: firstname, 
+        lastname: lastname,
+        email: email,
+        password: password,
+        wallet: wallet
+    });
+
     await user.setPassword(password);
-    await user.save().then(result => {
-        //console.log(result._id);
 
-        //token toekennen
-        let token = jwt.sign({
-            uid: result._id,
-            username: result.username
-        }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
+    user.save((err, doc) => {
+        if(!err){
 
-        res.json({
-            "status": "success",
-            "data": {
-                 "token": token
-            }
-        })
+            let token = jwt.sign({
+                uid: user._id,
+                username: user.username
+            }, config.get('jwt.secret')); //hardcoded-> nog te vervangen 
+
+            res.json({
+                "status": "success",
+                "data": {
+                    "userdata": doc,
+                    "token": token
+                }
+            });
+        }
     }).catch(error =>{
         res.json({
             "status": "error"
         })
-    });
+    });   
+
 };
 
 const login = async (req, res, next) => {
-    const user = await User.authenticate()(req.body.username, req.body.password).then(result => {
-        if(!result.user){
+    const user = new User();
+    user = await User.authenticate()(req.body.username, req.body.password).then(result => {
+
+        if (!result.user) {
             return res.json({
-                "status" : "failed",
+                "status": "failed",
                 "message": "Login failed"
             })
         }
+
         let token = jwt.sign({
-            uid:result.user._id,
-            username:result.user.username
+            uid: result.user._id,
+            username: result.user.username
         }, config.get('jwt.secret'));
-         
+
         return res.json({
-            "status":"succes",
-            "data":{
-                "token": token 
+            "status": "success",
+            "data": {
+                "token": token
             }
         });
     }).catch(error => {
         res.json({
-            "status":"error",
+            "status": "error",
             "message": error
         })
     });
-}
+};
+
 
 module.exports.signup = signup;
 module.exports.login = login;

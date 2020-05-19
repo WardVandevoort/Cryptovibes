@@ -43,7 +43,7 @@ const createTransaction = (req, res, next) => {
     });
 }
 
-//get all transactions
+//get alle transactions
 const getTransactions = (req, res) => {
     Transaction.find({}, (err, docs) => {
         if(!err){
@@ -59,4 +59,4 @@ const getTransactions = (req, res) => {
 
 module.exports.getOneTransaction = getOneTransaction; //1
 module.exports.createTransaction = createTransaction; //+1
-module.exports.getTransactions = getTransactions; //all
+module.exports.getTransactions = getTransactions; //alle

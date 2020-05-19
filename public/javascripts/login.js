@@ -1,10 +1,10 @@
-//const base_url = "https://cryptovibes.herokuapp.com/";
+const base_url = "http://localhost:3000/";
 
-var btnLogin = document.querySelector(".login-btn").addEventListener("click", (e) => {
+var btnLogin = document.querySelector(".login_btn").addEventListener("click", (e) => {
     let username = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
 
-    fetch('http://localhost:3000/users/login', {
+    fetch(base_url + 'users/login', {
         method: "post",
         headers: {
             'Content-Type': 'application/json'
@@ -16,15 +16,15 @@ var btnLogin = document.querySelector(".login-btn").addEventListener("click", (e
     }).then(response => {
         return response.json();
     }).then(json => {
-        if (json.status === "success") {
+        console.log(json);
+        if (json.status ==="success"){
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = "index";
-
+            window.location.href = base_url;
         } else {
             let feedback = document.querySelector(".alarm");
             feedback.textContent = "Login failed 😢";
-            feedback.classList.remove('hidden');
+            feedback.classList.remove('hidden'); 
         }
     })
 });
