@@ -1,7 +1,6 @@
 const Users = require('../../../models/Users');
-const Transaction = require('../../../models/Transaction');
 
-const getUsers = (req, res) => {
+const getAllUsers = (req, res) => {
     //console.log("werkt");
     Users.find({}, (err, docs) => {
         if(!err){
@@ -21,68 +20,5 @@ const getUsers = (req, res) => {
     });
 }
 
-//get one transaction
-const getOneTransaction = (req, res) => {
-    Transaction.findOne({_id: req.params.id}, (err, doc) => {
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "transactions": doc
-                }
-            });
-        }
-    });
-}
+module.exports.getAllUsers = getAllUsers;
 
-//create transfer
-const createTransaction = (req, res, next) => {
-    let transaction = new Transaction();
-
-    transaction.quantity = req.body.quantity;
-    transaction.receiver_id = req.body.receiverName;
-    transaction.sender_id = req.body.sender_id;
-    transaction.date = new Date().toLocaleDateString()
-    transaction.type_id = req.body.type_id;
-    transaction.message = req.body.message;
-    transaction.save((err, doc) => {
-        if(err){
-            res.json({
-                "status": "error",
-                "message": "Failed to save transaction"
-            });
-        }
-
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "transaction": doc
-                }
-            });
-        }
-    });
-}
-
-//get alle transactions
-const getTransactions = (req, res) => {
-    Transaction.find({}, (err, docs) => {
-        if(!err){
-            res.json({
-                "status": "success",
-                "data": {
-                    "transactions": docs
-                }
-            });
-        }
-    });
-}
-
-module.exports.getOneTransaction = getOneTransaction; //1
-module.exports.createTransaction = createTransaction; //+1
-module.exports.getTransactions = getTransactions; //alle
-module.exports.getUsers = getUsers;
-
-
-//dlet d = new Date();
-//let Month = d.getMonth() + 1;
