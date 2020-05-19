@@ -1,13 +1,13 @@
 
-let token = localStorage.getItem("token");
+/* let token = localStorage.getItem("token");
 let decoded = JSON.parse(atob(token.split('.')[1]));
 let username = decoded.username;
 let locate = username.indexOf("@student.thomasmore.be");
 let tokenData = username.slice(0, locate);
 
 let payment;
-
-fetch("http://localhost:3000/api/v1/cryptovibes/getUsers"
+ */
+fetch("http://localhost:3000/api/v1/cryptovibes/users"
 ).then(result => {
      return result.json();
  }).then(json => {
@@ -26,7 +26,7 @@ fetch("http://localhost:3000/api/v1/cryptovibes/getUsers"
 
 
  
-fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
+/* fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
 ).then(result => {
      return result.json();
  }).then(json => {
@@ -56,3 +56,4 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
      console.log(err);
      console.log("😭😭😭")
  });
+ */
