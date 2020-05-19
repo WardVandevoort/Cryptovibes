@@ -1,8 +1,0 @@
-{
-    "Database":{
-        "conn": "mongodb://localhost:27017/cryptovibes"
-    },
-    "jwt": {
-        "secret" : "MyVerySecretWord"
-    }
-}
