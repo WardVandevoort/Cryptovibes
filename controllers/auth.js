@@ -50,7 +50,8 @@ const signup = async (req, res, next) =>{
 };
 
 const login = async (req, res, next) => {
-    const user = await User.authenticate()(req.body.username, req.body.password).then(result => {
+    const user = new User();
+    user = await User.authenticate()(req.body.username, req.body.password).then(result => {
 
         if (!result.user) {
             return res.json({
