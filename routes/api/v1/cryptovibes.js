@@ -9,6 +9,6 @@ router.post('/', transactionsController.createTransaction);  //new transaction
 
 router.get('/', transactionsController.getTransactions);  //all tranactions
 
-router.get('/', userController.getUsers);  //all users
+router.get('/users', userController.getUsers);  //all users
 
 module.exports = router;
