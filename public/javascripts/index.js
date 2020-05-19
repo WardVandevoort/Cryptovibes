@@ -7,7 +7,7 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
  }).then(json => {
      json.data.transactions.forEach(transaction => {
          if (transaction.receiver_id == token.username) {
-             payment = `<div class="deposit">
+             payment = `<div class="deposit ${transaction.receiver_id} ${token.username}">
              <p>Cryptocoin +${transaction.quantity}</p>
              </div>`;
           } 
@@ -24,9 +24,3 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
      console.log(err);
      console.log("😭😭😭")
  });
- 
- 
- /*//append a todo to the dom 
- let appendPayment = (json) => {
-     document.querySelector(".history").insertAdjacentHTML('afterend', payment);
- }*/
