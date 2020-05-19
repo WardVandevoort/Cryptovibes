@@ -62,7 +62,7 @@ const getTransactions = (req, res) => {
 }
 
 const getUsers = (req, res) => {
-    console.log("werkt");
+    //console.log("werkt");
     Users.find({}, (err, docs) => {
         if(!err){
             res.json({
@@ -80,6 +80,7 @@ const getUsers = (req, res) => {
         }
     });
 }
+
 module.exports.getUsers = getUsers;
 module.exports.getOneTransaction = getOneTransaction; //1
 module.exports.createTransaction = createTransaction; //+1
