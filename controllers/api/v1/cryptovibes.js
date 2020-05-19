@@ -1,4 +1,5 @@
 const Transaction = require('../../../models/Transaction');
+const Users = require('../../../models/Users');
 
 //dlet d = new Date();
 //let Month = d.getMonth() + 1;
@@ -60,8 +61,26 @@ const getTransactions = (req, res) => {
     });
 }
 
-
-
+const getUsers = (req, res) => {
+    console.log("werkt");
+    Users.find({}, (err, docs) => {
+        if(!err){
+            res.json({
+                "status": "success",
+                "data": {
+                    "users": docs
+                }
+            });
+        }
+        else{
+            res.json({
+                "status": "error",
+                "message": err
+            });
+        }
+    });
+}
+module.exports.getUsers = getUsers;
 module.exports.getOneTransaction = getOneTransaction; //1
 module.exports.createTransaction = createTransaction; //+1
 module.exports.getTransactions = getTransactions; //alle
