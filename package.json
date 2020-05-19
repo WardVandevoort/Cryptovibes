@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "./node_modules/.bin/nodemon ./bin/www"
   },
   "dependencies": {
     "config": "^3.3.1",
@@ -25,17 +25,5 @@
     "pug": "2.0.0-beta11",
     "ws": "^7.2.5"
   },
-  "devDependencies": {},
-  "description": "",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WardVandevoort/Cryptovibes.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/WardVandevoort/Cryptovibes/issues"
-  },
-  "homepage": "https://github.com/WardVandevoort/Cryptovibes#readme"
+  "devDependencies": {}
 }

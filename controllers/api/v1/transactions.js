@@ -1,4 +1,4 @@
-const Transaction = require('../../../models/Transaction');
+/* const Transaction = require('../../../models/Transaction');
 
 //get one transaction
 const getOneTransaction = (req, res) => {
@@ -44,7 +44,7 @@ const createTransaction = (req, res, next) => {
 }
 
 //get alle transactions
-const getAllTransactions = (req, res) => {
+const getTransactions = (req, res) => {
     Transaction.find({}, (err, docs) => {
         if(!err){
             res.json({
@@ -59,8 +59,8 @@ const getAllTransactions = (req, res) => {
 
 module.exports.getOneTransaction = getOneTransaction; //1
 module.exports.createTransaction = createTransaction; //+1
-module.exports.getAllTransactions = getAllTransactions; //alle
+module.exports.getTransactions = getTransactions; //alle
 
 
 //dlet d = new Date();
-//let Month = d.getMonth() + 1;
+//let Month = d.getMonth() + 1; */
