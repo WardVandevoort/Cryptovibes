@@ -1,8 +1,33 @@
-/* 
+body{
+  position: relative;
+  width: 375px;
+  height: 812px;
+  background: #000000;
+  /* background-image: url('./logocrypto.svg');
+  background-position: center;
+  background-size: 20 10;
+  background-repeat: no-repeat; */
+}
 
+h1{
+  font-family: Industry;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #72ADD1;
+}
 
-
-
+h3{
+  font-family: Industry;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 43px;
+  text-align: center;
+  color: #72ADD1;
+}
 
 .matchUser{
   font-family: Industry;
@@ -13,11 +38,15 @@
 }
 
 .nav{
-  
+  font-family: Industry;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 a{
   padding: 2.5%;
 }
 
- */
