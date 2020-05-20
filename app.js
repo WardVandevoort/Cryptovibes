@@ -20,7 +20,7 @@ mongoose.connect(process.env.dbconn || config.get('Database.conn'), {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then( () => {
-  console.log("connection success 😁");
+  console.log("connection success 🎉");
 })
 .catch ((err) => {
   console.log(`error: ${err} 😢`);
@@ -44,7 +44,8 @@ app.use('/users', usersRouter);
 app.use('/login', usersRouter);
 app.use('/signup', usersRouter);
 app.use('/transfer', transferRouter);
-app.use("/api/v1/cryptovibes", apiRoute);
+app.use('/api/v1/cryptovibes', apiRoute);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

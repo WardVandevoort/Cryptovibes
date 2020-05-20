@@ -5,7 +5,7 @@ const matchUser = document.querySelector('.matchUser');
 
 //search receiver and filter it
 const searchReceivers = async searchText => {
-    const res = await fetch ('../data/data.json');
+    const res = await fetch (base_url + 'cryptovibes/users');
     const receivers = await res.json();
 
     //console.log(receivers);
@@ -27,7 +27,7 @@ const searchReceivers = async searchText => {
 
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match =>`${match.email}`).join('');
+        const html = matches.map(match =>`<a class ='${match.email}' href = " ">${match.email}</a>`).join('');
         matchUser.innerHTML= html; 
     }
 };

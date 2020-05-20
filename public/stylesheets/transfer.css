@@ -1,8 +1,8 @@
 body{
   position: relative;
-  width: 375px;
-  height: 812px;
-  background: darkblue;
+  /* width: 375px;
+  height: 812px; */
+  background: #000000;
 }
 
 h1{
@@ -21,55 +21,127 @@ h1{
   background-image: url('./logocrypto.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  height: 20vh;
+  height: 40vh;
   width:auto;
   box-sizing: border-box;
-  margin-left: 25%;
+  margin-left: 35%;
 }
 
-.transaction{
+/* .transaction{
   width: 282px;
   height: 269px;
   text-align: center;
+} */
+
+.form{
+  display:grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: 15px;
+  margin-top: 5%;
+}
+
+.searchReceiver{
+  display: inline-grid;
+  grid-row: 1 1;
+  justify-content: center;
+  font-family: Industry;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7FB3C9;
+  border: 0px;
+}
+
+.searchReceiver label{
+  display: inline-grid;
+  grid-row: 1 1;
 }
 
 .receiverName{
+  display: inline-grid;
+  grid-row: 1 1;
+  justify-content: center;
   width:250px;
-  height:45px;
+  height:40px;
   font-family: Industry;
   font-style: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   color: #7FB3C9;
   background: #000000;
-  border: 0px;
+  border: dotted 1px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.matchUser{
+  display: inline-grid;
+  grid-row: 2 2;
+  justify-content: center;
+  font-family: Industry;
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #72ADD1;
 }
 
 .reason{
+  display: inline-grid;
+  grid-row: 3 3;
   font-family: Industry;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
+  line-height: 22px;
+  color: #7FB3C9;
+}
+
+.reason label{
+  display: inline-grid;
+  grid-row: 3 3;
+  justify-content: center;
+}
+
+.reason select{
+  display: inline-grid;
+  grid-row: 3 3;
+  border: solid 0.5px;
+  border-radius: 16px;
+  width:250px;
+  height:40px;
+  font-family: Industry;
+  font-style: normal;
+  font-size: 16px;
   line-height: 22px;
   color: #7FB3C9;
   background: #000000;
-  border: 0px;
-  margin-top:15px;
-  margin-bottom:15px;
+  border: dotted 1px;
+  border-radius: 16px;
+  text-align: center;
 }
 
 .amount{
+  display: inline-flex;
+  grid-row:3 3;
+  justify-content: center;
   font-family: Industry;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
   color: #7FB3C9;
-  border: 0px;
-  margin-bottom:15px;
+  margin-left:-21%;
+}
+
+.amount#field{
+  display: inline-flex;
 }
 
 .message{
+  display: inline-flex;
+  grid-row: 4 4;
+  justify-content: center;
   font-family: Industry;
   font-style: normal;
   font-weight: bold;
@@ -77,7 +149,12 @@ h1{
   line-height: 22px;
   color: #7FB3C9;
   border: 0px;
-  margin-bottom:15px;
+  margin-left:-20%;
+  margin-top:-5%;
+}
+
+.message#field{
+  grid-row:4 4;
 }
 
 #field{
@@ -88,12 +165,15 @@ h1{
   color: #72ADD1;
   opacity: 0.55;
   border: 0px;
-  width:200px;
+  display: inline-flex;
+  width: 100px;
   height:45px;
 }
 
 .submit{
-  margin:0.5%;
+  display: flex;
+  justify-content: center;
+  margin-top:-25%;
 }
 
 .btn{

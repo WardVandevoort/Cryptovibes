@@ -3,18 +3,24 @@ head
   meta(charset='UTF-8')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet', href='/stylesheets/style.css')
-section
+  section
   h1 Cryptovibes
-  h3
-    | Current balance 
-    span.balance
-  h3 Most recent transaction
-  .recent
-  h3 History
-  .history
 
-  a.nav(href='/transfer') Transfer
-  a.nav(href='#') Scoreboard
-  a.nav(href='#') Home
-  a.nav(href='#') Account
+  h3 Current balance 
+    span.balance
+
+  .recentTransaction
+    h3 Most recent transaction
+      .recent
+
+  .historyTransaction
+    h3 History
+      .history
+
+  .navigationbar
+    a.nav(href='/transfer') Transfer
+    a.nav(href='/leaderboard') Leaderboard
+    a.nav(href='/index') Home
+    a.nav(href='/account') Account
+
 script(src='../javascripts/index.js')

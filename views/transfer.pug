@@ -13,14 +13,26 @@ h1 Cryptovibes
     .transactionform
       .form
         .searchReceiver
-          input.receiverName(type='text' placeholder='Enter emailadres of receiver...')
+          label(for='receiver') Choose your receiver
+          input.receiverName(type='text' placeholder='Enter emailadres of receiver')
           .matchUser
+
+        .reason
+          label#reasonlabel(for='reason') Reason
+            select(name='Reason')
+              option(value='1') Design
+              option(value='2') Development
+              option(value='3') Feedback
+              option(value='4') Other
+
         .amount
           label(for='amount') Amount
           input#field(type='text' value='amount' placeholder='amount')
+
         .message
           label(for='message') Message
           input#field(type='text' value='message' placeholder='message')
+
       .submit
         button.btn(type='submit')
           span.btn__text Transfer

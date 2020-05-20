@@ -1,8 +1,7 @@
 const User = require('../models/User');
-//const Users = require('../models/Users');
+const Users = require('../models/Users');
 const jwt = require('jsonwebtoken');
 const config = require('config');
-
 
 const signup = async (req, res, next) =>{
     //console.log(req.body);
@@ -79,6 +78,26 @@ const login = async (req, res, next) => {
     });
 };
 
-
+const getallUsers = (req,res ) =>{
+    //console.log(docs);
+    Users.find({}, (err,docs) =>{
+        if (err) {
+          res.json({
+            status: 'error',
+            message: err.message,
+          })
+        }
+        if(!err){
+            console.log(docs)
+            res.json({
+                "status": "success",
+                "data":{
+                    "Users":docs
+                }
+            })
+        }
+    })
+}
 module.exports.signup = signup;
 module.exports.login = login;
+module.exports.getallUsers = getallUsers;
