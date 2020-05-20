@@ -35,12 +35,12 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/transfer"
          if (transaction.receiver_id == tokenData) {
              if(first == true){
              first = false;
-             payment = `<div class="deposit">
+             payment = `<div class="deposit ${transaction._id}">
              <p>Cryptocoin +${transaction.quantity}</p>
              </div>`;
              document.querySelector(".recent").insertAdjacentHTML('afterend', payment); 
              }
-             payment = `<div class="deposit">
+             payment = `<div class="deposit ${transaction._id}">
              <p>Cryptocoin +${transaction.quantity}</p>
              </div>`;
              document.querySelector(".history").insertAdjacentHTML('afterend', payment);
@@ -48,12 +48,12 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/transfer"
           else if(transaction.sender_id == tokenData){
              if(first == true){
              first = false;
-             payment = `<div class="deposit">
-             <p>Cryptocoin +${transaction.quantity}</p>
+             payment = `<div class="withdrawal ${transaction._id}">
+             <p>Cryptocoin -${transaction.quantity}</p>
              </div>`;
              document.querySelector(".recent").insertAdjacentHTML('afterend', payment); 
              }
-             payment = `<div class="withdrawal">
+             payment = `<div class="withdrawal ${transaction._id}">
              <p>Cryptocoin -${transaction.quantity}</p>
              </div>`;
              document.querySelector(".history").insertAdjacentHTML('afterend', payment);
