@@ -25,7 +25,9 @@
     "pug": "2.0.0-beta11",
     "ws": "^7.2.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.26.5"
+  },
   "description": "",
   "main": "app.js",
   "repository": {
