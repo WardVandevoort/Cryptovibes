@@ -10,7 +10,7 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
 ).then(result => {
      return result.json();
  }).then(json => {
-     json.data.users.forEach(user => {
+     json.data.Users.forEach(user => {
 
          if (user.username == tokenData) {
              document.querySelector(".balance").innerHTML = user.wallet;
@@ -25,7 +25,7 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
 
 
  
-fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
+fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/transfer"
 ).then(result => {
      return result.json();
  }).then(json => {
