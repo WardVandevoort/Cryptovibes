@@ -5,6 +5,7 @@ let locate = username.indexOf("@student.thomasmore.be");
 let tokenData = username.slice(0, locate);
 
 let payment;
+let first = true;
 
 fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
 ).then(result => {
@@ -32,16 +33,30 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/transfer"
      json.data.transactions.forEach(transaction => {
 
          if (transaction.receiver_id == tokenData) {
+             if(first == true){
+             first = false;
+             payment = `<div class="deposit">
+             <p>Cryptocoin +${transaction.quantity}</p>
+             </div>`;
+             document.querySelector(".recent").insertAdjacentHTML('afterend', payment); 
+             }
              payment = `<div class="deposit">
              <p>Cryptocoin +${transaction.quantity}</p>
              </div>`;
              document.querySelector(".history").insertAdjacentHTML('afterend', payment);
           } 
           else if(transaction.sender_id == tokenData){
-               payment = `<div class="withdrawal">
-               <p>Cryptocoin -${transaction.quantity}</p>
-               </div>`;
-               document.querySelector(".history").insertAdjacentHTML('afterend', payment);
+             if(first == true){
+             first = false;
+             payment = `<div class="deposit">
+             <p>Cryptocoin +${transaction.quantity}</p>
+             </div>`;
+             document.querySelector(".recent").insertAdjacentHTML('afterend', payment); 
+             }
+             payment = `<div class="withdrawal">
+             <p>Cryptocoin -${transaction.quantity}</p>
+             </div>`;
+             document.querySelector(".history").insertAdjacentHTML('afterend', payment);
           }
          
      });
