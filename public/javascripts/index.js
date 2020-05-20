@@ -1,16 +1,23 @@
 let token = localStorage.getItem("token");
+
+if(token == null){
+   
+    window.location.href = "https://cryptovibes.herokuapp.com/users/login";
+}
+
 let decoded = JSON.parse(atob(token.split('.')[1]));
 let username = decoded.username;
 let locate = username.indexOf("@student.thomasmore.be");
 let tokenData = username.slice(0, locate);
 
 let payment;
+let first = true;
 
 fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
 ).then(result => {
      return result.json();
  }).then(json => {
-     json.data.users.forEach(user => {
+     json.data.Users.forEach(user => {
 
          if (user.username == tokenData) {
              document.querySelector(".balance").innerHTML = user.wallet;
@@ -25,27 +32,23 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
 
 
  
-fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
+fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/transfer"
 ).then(result => {
      return result.json();
  }).then(json => {
      json.data.transactions.forEach(transaction => {
-          console.log(json);
-          console.log(json.data);
-          console.log(json.data.transactions);
-          console.log(transaction);
 
          if (transaction.receiver_id == tokenData) {
-             payment = `<div class="deposit">
+             payment = `<div class="deposit ${transaction._id}">
              <p>Cryptocoin +${transaction.quantity}</p>
              </div>`;
              document.querySelector(".history").insertAdjacentHTML('afterend', payment);
           } 
           else if(transaction.sender_id == tokenData){
-               payment = `<div class="withdrawal">
-               <p>Cryptocoin -${transaction.quantity}</p>
-               </div>`;
-               document.querySelector(".history").insertAdjacentHTML('afterend', payment);
+             payment = `<div class="withdrawal ${transaction._id}">
+             <p>Cryptocoin -${transaction.quantity}</p>
+             </div>`;
+             document.querySelector(".history").insertAdjacentHTML('afterend', payment);
           }
          
      });
