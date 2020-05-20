@@ -1,12 +1,7 @@
 let token = localStorage.getItem("token");
 
 if(token == null){
-    console.log("null");
-    window.location.href = "https://cryptovibes.herokuapp.com/users/login";
-}
-
-if(token == "undefined"){
-    console.log("undefined");
+   
     window.location.href = "https://cryptovibes.herokuapp.com/users/login";
 }
 
