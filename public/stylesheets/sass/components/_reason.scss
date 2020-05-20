@@ -1,0 +1,35 @@
+.reason{
+    display: inline-grid;
+    grid-row: 3 3;
+    font-family: Industry;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #7FB3C9;
+  }
+  
+  .reason label{
+    display: inline-grid;
+    grid-row: 3 3;
+    justify-content: center;
+  }
+  
+  .reason select{
+    display: inline-grid;
+    grid-row: 3 3;
+    border: solid 0.5px;
+    border-radius: 16px;
+    width:250px;
+    height:40px;
+    font-family: Industry;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7FB3C9;
+    background: #000000;
+    border: dotted 1px;
+    border-radius: 16px;
+    text-align: center;
+  }
+  

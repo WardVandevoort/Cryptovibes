@@ -1,0 +1,217 @@
+body {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  background: #000000;
+  /* background-image: url('./logocrypto.svg');
+  background-position: center;
+  background-size: 20 10;
+  background-repeat: no-repeat; */
+}
+
+#field {
+  background: #000000;
+  font-family: Industry;
+  font-style: light;
+  text-align: center;
+  color: #72ADD1;
+  opacity: 0.55;
+  border: 0px;
+  display: inline-flex;
+  width: 100px;
+  height: 45px;
+}
+
+.image {
+  height: 250px;
+  width: auto;
+  background-image: url("./logocrypto.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40vh;
+  width: auto;
+  box-sizing: border-box;
+  margin-left: 35%;
+}
+
+h1 {
+  font-family: Industry;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #72ADD1;
+}
+
+h3 {
+  font-family: Industry;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 43px;
+  text-align: center;
+  color: #72ADD1;
+}
+
+.form {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: 15px;
+  margin-top: 5%;
+}
+
+.searchReceiver {
+  display: inline-grid;
+  grid-row: 1 1;
+  justify-content: center;
+  font-family: Industry;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7FB3C9;
+  border: 0px;
+}
+
+.searchReceiver label {
+  display: inline-grid;
+  grid-row: 1 1;
+}
+
+.receiverName {
+  display: inline-grid;
+  grid-row: 1 1;
+  justify-content: center;
+  width: 250px;
+  height: 40px;
+  font-family: Industry;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7FB3C9;
+  background: #000000;
+  border: dotted 1px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.matchUser {
+  display: inline-grid;
+  grid-row: 2 2;
+  justify-content: center;
+  font-family: Industry;
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+  color: #72ADD1;
+}
+
+.amount {
+  display: inline-flex;
+  grid-row: 3 3;
+  justify-content: center;
+  font-family: Industry;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7FB3C9;
+  margin-left: -21%;
+}
+
+.amount#field {
+  display: inline-flex;
+}
+
+.reason {
+  display: inline-grid;
+  grid-row: 3 3;
+  font-family: Industry;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7FB3C9;
+}
+
+.reason label {
+  display: inline-grid;
+  grid-row: 3 3;
+  justify-content: center;
+}
+
+.reason select {
+  display: inline-grid;
+  grid-row: 3 3;
+  border: solid 0.5px;
+  border-radius: 16px;
+  width: 250px;
+  height: 40px;
+  font-family: Industry;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7FB3C9;
+  background: #000000;
+  border: dotted 1px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.message {
+  display: inline-flex;
+  grid-row: 4 4;
+  justify-content: center;
+  font-family: Industry;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7FB3C9;
+  border: 0px;
+  margin-left: -20%;
+  margin-top: -5%;
+}
+
+.message#field {
+  grid-row: 4 4;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-top: -25%;
+}
+
+.btn {
+  position: absolute;
+  width: 150px;
+  height: 45px;
+  background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
+  mix-blend-mode: normal;
+  opacity: 0.55;
+  box-shadow: 1px 1px 2px #6D9EB2;
+  border-radius: 16px;
+}
+
+.btn__text {
+  font-family: Industry;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 26px;
+}
+
+.navigationbar {
+  font-family: Industry;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=app.css.map */
