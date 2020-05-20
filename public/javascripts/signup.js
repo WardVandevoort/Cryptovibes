@@ -1,4 +1,4 @@
-const base_url = "https://cryptovibes.herokuapp.com/";
+const base_url = "http://localhost:3000/api/v1/";
 
 var btnSignup = document.querySelector("#submit").addEventListener("click", (e) => {
     let username;

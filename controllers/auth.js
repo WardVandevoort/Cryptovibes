@@ -1,5 +1,5 @@
 const User = require('../models/User');
-//const Users = require('../models/Users');
+const Users = require('../models/Users');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 
@@ -79,8 +79,8 @@ const login = async (req, res, next) => {
 };
 
 const getallUsers = (req,res ) =>{
-    console.log(docs);
-    User.find({}, (err,docs) =>{
+    //console.log(docs);
+    Users.find({}, (err,docs) =>{
         if (err) {
           res.json({
             status: 'error',

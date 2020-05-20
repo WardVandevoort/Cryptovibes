@@ -1,10 +1,10 @@
-const base_url = "http://localhost:3000/";
+//const base_url = "http://localhost:3000/";
 
 var btnLogin = document.querySelector(".login_btn").addEventListener("click", (e) => {
     let username = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
 
-    fetch(base_url + 'users/login', {
+    fetch('localhost:3000/api/v1/cryptovibes/users/login', {
         method: "post",
         headers: {
             'Content-Type': 'application/json'
