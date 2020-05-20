@@ -6,7 +6,7 @@ let tokenData = username.slice(0, locate);
 
 let payment;
 
-fetch("http://localhost:3000/api/v1/cryptovibes/users"
+fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
 ).then(result => {
      return result.json();
  }).then(json => {
@@ -25,7 +25,7 @@ fetch("http://localhost:3000/api/v1/cryptovibes/users"
 
 
  
-fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/"
+fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/users"
 ).then(result => {
      return result.json();
  }).then(json => {
