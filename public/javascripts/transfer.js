@@ -27,7 +27,7 @@ const searchReceivers = async searchText => {
 
 const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match =>`${match.email}`).join('');
+        const html = matches.map(match =>`<a class =`${match.email}` href = " ">${match.email}</a>`).join('');
         matchUser.innerHTML= html; 
     }
 };
