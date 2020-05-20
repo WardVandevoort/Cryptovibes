@@ -1,4 +1,9 @@
 let token = localStorage.getItem("token");
+
+if(token == ""){
+    window.location.href = "https://cryptovibes.herokuapp.com/users/login";
+}
+
 let decoded = JSON.parse(atob(token.split('.')[1]));
 let username = decoded.username;
 let locate = username.indexOf("@student.thomasmore.be");
