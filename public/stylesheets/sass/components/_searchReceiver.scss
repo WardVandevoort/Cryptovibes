@@ -1,0 +1,45 @@
+.searchReceiver{
+    display: inline-grid;
+    grid-row: 1 1;
+    justify-content: center;
+    font-family: Industry;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #7FB3C9;
+    border: 0px;
+  }
+  
+  .searchReceiver label{
+    display: inline-grid;
+    grid-row: 1 1;
+  }
+  
+  .receiverName{
+    display: inline-grid;
+    grid-row: 1 1;
+    justify-content: center;
+    width:250px;
+    height:40px;
+    font-family: Industry;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7FB3C9;
+    background: #000000;
+    border: dotted 1px;
+    border-radius: 16px;
+    text-align: center;
+  }
+  
+  .matchUser{
+    display: inline-grid;
+    grid-row: 2 2;
+    justify-content: center;
+    font-family: Industry;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #72ADD1;
+  }

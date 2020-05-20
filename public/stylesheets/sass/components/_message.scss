@@ -1,0 +1,18 @@
+.message{
+    display: inline-flex;
+    grid-row: 4 4;
+    justify-content: center;
+    font-family: Industry;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #7FB3C9;
+    border: 0px;
+    margin-left:-20%;
+    margin-top:-5%;
+  }
+  
+  .message#field{
+    grid-row:4 4;
+  }
