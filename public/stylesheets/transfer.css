@@ -5,15 +5,6 @@ body{
   background: #000000;
 }
 
-h1{
-  font-family: Industry;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 43px;
-  text-align: center;
-  color: #72ADD1;
-}
 
 .image{
   height: 250px;
@@ -26,12 +17,6 @@ h1{
   box-sizing: border-box;
   margin-left: 35%;
 }
-
-/* .transaction{
-  width: 282px;
-  height: 269px;
-  text-align: center;
-} */
 
 .form{
   display:grid;
@@ -175,4 +160,3 @@ h1{
   justify-content: center;
   margin-top:-25%;
 }
-
