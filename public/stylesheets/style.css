@@ -15,6 +15,16 @@ h1{
   color: #72ADD1;
 }
 
+h3{
+  font-family: Industry;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 43px;
+  text-align: center;
+  color: #72ADD1;
+}
+
 .matchUser{
   font-family: Industry;
   font-style: normal;
