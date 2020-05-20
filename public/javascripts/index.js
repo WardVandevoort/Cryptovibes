@@ -6,9 +6,9 @@ if(token == null){
 }
 
 let decoded = JSON.parse(atob(token.split('.')[1]));
-let username = decoded.username;
-let locate = username.indexOf("@student.thomasmore.be");
-let tokenData = username.slice(0, locate);
+let tokenData = decoded.username; // let naam was username
+/*let locate = username.indexOf("@student.thomasmore.be");
+let tokenData = username.slice(0, locate);*/
 
 let payment;
 let first = true;
