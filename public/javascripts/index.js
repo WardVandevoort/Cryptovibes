@@ -33,26 +33,12 @@ fetch("https://cryptovibes.herokuapp.com/api/v1/cryptovibes/transfer"
      json.data.transactions.forEach(transaction => {
 
          if (transaction.receiver_id == tokenData) {
-             if(first == true){
-             first = false;
-             payment = `<div class="deposit ${transaction._id}">
-             <p>Cryptocoin +${transaction.quantity}</p>
-             </div>`;
-             document.querySelector(".recent").insertAdjacentHTML('afterend', payment); 
-             }
              payment = `<div class="deposit ${transaction._id}">
              <p>Cryptocoin +${transaction.quantity}</p>
              </div>`;
              document.querySelector(".history").insertAdjacentHTML('afterend', payment);
           } 
           else if(transaction.sender_id == tokenData){
-             if(first == true){
-             first = false;
-             payment = `<div class="withdrawal ${transaction._id}">
-             <p>Cryptocoin -${transaction.quantity}</p>
-             </div>`;
-             document.querySelector(".recent").insertAdjacentHTML('afterend', payment); 
-             }
              payment = `<div class="withdrawal ${transaction._id}">
              <p>Cryptocoin -${transaction.quantity}</p>
              </div>`;
