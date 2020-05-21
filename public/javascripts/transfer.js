@@ -22,7 +22,7 @@ document.querySelector(".btn").addEventListener('click', (e) =>{
     }).then(response => {
         return response.json();
     }).then(json => {
-        //console.log(json);
+        console.log(json);
         if (json.status === 'success'){
             alert("Transfer confirmed");
             //window.location.href ='/index';
