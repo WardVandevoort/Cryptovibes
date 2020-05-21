@@ -240,14 +240,13 @@ h3 {
 
 .payment {
   border-bottom: 2px solid #72ADD1;
-  background-color: blue;
 }
 
-.payment--deposit.payment__quantity {
+.payment--deposit .payment__quantity {
   color: #128A05;
 }
 
-.payment--withdrawal.payment__quantity {
+.payment--withdrawal .payment__quantity {
   color: #651717;
 }
 
