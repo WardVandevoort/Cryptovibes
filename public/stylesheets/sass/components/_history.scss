@@ -3,7 +3,11 @@ margin: 0;
 }
 
 .payment{
-border-bottom: 2px solid $color-text;
+border-bottom: 1px solid $color-text;
+}
+
+.payment__quantity{
+margin-left: 10px;
 }
 
 .payment--deposit .payment__quantity{
@@ -12,4 +16,9 @@ color: $color-deposit;
 
 .payment--withdrawal .payment__quantity{
 color: $color-withdrawal;
+}
+
+.historyTransaction{
+     width: 80%;
+     margin: auto;
 }

@@ -239,7 +239,11 @@ h3 {
 }
 
 .payment {
-  border-bottom: 2px solid #72ADD1;
+  border-bottom: 1px solid #72ADD1;
+}
+
+.payment__quantity {
+  margin-left: 10px;
 }
 
 .payment--deposit .payment__quantity {
@@ -248,6 +252,11 @@ h3 {
 
 .payment--withdrawal .payment__quantity {
   color: #651717;
+}
+
+.historyTransaction {
+  width: 80%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=app.css.map */
