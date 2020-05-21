@@ -5,6 +5,7 @@ const transactionSchema = new Schema({
     receiver_id: String,
     sender_id: String,
     date: String,
+    message: String,
     type_id: {
         type: String,
         required: true
