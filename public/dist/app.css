@@ -86,7 +86,7 @@ h3 {
   margin-top: 5%;
 }
 
-label {
+.inputLabel {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -218,14 +218,14 @@ label {
 }
 
 .btn {
-  position: absolute;
-  width: 150px;
-  height: 45px;
-  background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
-  mix-blend-mode: normal;
-  opacity: 0.55;
-  box-shadow: 1px 1px 2px #6D9EB2;
-  border-radius: 16px;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: Industry;
+  color: white;
+  border-radius: 15px;
 }
 
 .btn__text {
@@ -238,17 +238,8 @@ label {
   line-height: 26px;
 }
 
-.btn-login {
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-family: Industry;
-  color: white;
-  background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
-  mix-blend-mode: normal;
-  border-radius: 15px;
+.btn--login {
+  background-color: #415265;
 }
 
 .payment p {
@@ -335,6 +326,11 @@ label {
   background-color: #415265;
   color: white;
   border-radius: 15px;
+}
+
+.signuphere {
+  color: #72ADD1;
+  font-family: Industry;
 }
 
 .nav > a {

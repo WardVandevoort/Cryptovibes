@@ -13,13 +13,13 @@ head
         h1 CRYPTOVIBES
         div.logo
         div
-          label(for='email') Enter your username [r-nummer]
+          label.inputLabel(for='email') Enter your username [r-nummer]
           input#email.inputText(type='text', name='email', placeholder='Username')
         div
-          label(for='password') Enter your password
+          label.inputLabel(for='password') Enter your password
           input#password.inputText(type='password', name='password', placeholder='Password')
           p.signuphere
           | Don't have an account ? 
-          a.signuphere-link(href='https://cryptovibes.herokuapp.com/users/signup') Signup here
-          button.login__btn Let's go !
+          a.signuphere--link(href='https://cryptovibes.herokuapp.com/users/signup') Signup here
+          button.btn.btn--login Let's go !
   script(src='../javascripts/login.js')
