@@ -34,15 +34,8 @@ body {
 }
 
 .image {
-  height: 250px;
-  width: auto;
-  background-image: url("../../logocrypto.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
   height: 40vh;
   width: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin-left: 35%;
 }
 
