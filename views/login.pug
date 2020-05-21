@@ -6,20 +6,20 @@ head
   link(rel='stylesheet', href='https://use.typekit.net/nkl8usf.css')
   link(rel='stylesheet', href='/dist/app.css')
   title Cryptovibes Log in
-.loginMain
+.main
   section.login
     .container
       .login-content
         h1 CRYPTOVIBES
-        img.logo(src='../public/logocrypto.svg')
+        div.logo
         div
           label(for='email') Enter your username [r-nummer]
-          input#email.inputText(type='text', name='email')
+          input#email.inputText(type='text', name='email', placeholder='Username')
         div
           label(for='password') Enter your password
-          input#password.inputText(type='password', name='password')
-          button.btn-login Login
-        p.signuphere
-        | Don't have an account ? 
-        a.signuphere-link(href='https://cryptovibes.herokuapp.com/users/signup') Signup here
+          input#password.inputText(type='password', name='password', placeholder='Password')
+          p.signuphere
+          | Don't have an account ? 
+          a.signuphere-link(href='https://cryptovibes.herokuapp.com/users/signup') Signup here
+          button.btn-login Let's go !
   script(src='../javascripts/login.js')

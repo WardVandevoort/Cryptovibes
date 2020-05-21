@@ -90,6 +90,8 @@ label {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: left;
+  color: #72ADD1;
 }
 
 .searchReceiver {
@@ -238,13 +240,15 @@ label {
 
 .btn-login {
   display: block;
-  width: 150px;
-  height: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: Industry;
+  color: white;
   background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
   mix-blend-mode: normal;
-  opacity: 0.55;
-  box-shadow: 1px 1px 2px #6D9EB2;
-  border-radius: 16px;
+  border-radius: 15px;
 }
 
 .payment p {
@@ -302,6 +306,18 @@ label {
 .loginMain {
   width: 70%;
   margin: auto;
+  text-align: center;
+}
+
+.inputText {
+  background-color: #000000;
+  border-bottom: 1px dotted #72ADD1;
+}
+
+.logo {
+  background-image: url("../logocrypto.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .nav > a {

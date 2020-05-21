@@ -1,4 +1,14 @@
 .loginMain{
      width: 70%;
      margin: auto;
+     text-align: center;
+}
+.inputText{
+     background-color: #000000;
+     border-bottom: 1px dotted $color-text;
+}
+.logo{
+     background-image: url("../logocrypto.svg");
+     background-repeat: no-repeat;
+     background-position: center;
 }
