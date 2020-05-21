@@ -8,6 +8,8 @@ text-align: center;
 
 .payment{
 border-bottom: 1px solid $color-text;
+padding-top: 10px;
+padding-bottom: 10px;
 }
 
 .payment__quantity{
@@ -26,18 +28,17 @@ color: $color-withdrawal;
      width: 70%;
      margin: auto;
      background-image: url("../logocrypto.svg");
-}
-
-.historyMain h3{
-     text-align: left;
+     background-repeat: no-repeat;
+     background-position: center;
+     opacity: 0.5;
 }
 
 .historyBalance{
      color: white;
      font-weight: lighter;
-     text-align: center;
 }
 
 .balance{
      color: $color-deposit;
+     margin-left: 15px;
 }
