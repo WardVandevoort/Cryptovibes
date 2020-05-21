@@ -1,8 +1,26 @@
+@import url("https://p.typekit.net/p.css?s=1&k=nkl8usf&ht=tk&f=25309.25310&a=16243434&app=typekit&e=css");
+@font-face {
+  font-family: "industry";
+  src: url("https://use.typekit.net/af/2e7e09/00000000000000003b9adf5a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("woff2"), url("https://use.typekit.net/af/2e7e09/00000000000000003b9adf5a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("woff"), url("https://use.typekit.net/af/2e7e09/00000000000000003b9adf5a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "industry";
+  src: url("https://use.typekit.net/af/d6b712/00000000000000003b9adf58/27/l?subset_id=2&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/d6b712/00000000000000003b9adf58/27/d?subset_id=2&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/d6b712/00000000000000003b9adf58/27/a?subset_id=2&fvd=n7&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+
 body {
   position: relative;
   width: 375px;
   height: 812px;
-  background: #3f3f3f;
+  background: #000000;
+  text-align: left;
   /* background-image: url('./logocrypto.svg');
     background-position: center;
     background-size: 20 10;
@@ -259,6 +277,39 @@ h3 {
   -webkit-box-shadow: 1px 1px 2px #6D9EB2;
           box-shadow: 1px 1px 2px #6D9EB2;
   border-radius: 16px;
+}
+
+.payment p {
+  margin: 0;
+}
+
+.payment {
+  border-bottom: 1px solid #72ADD1;
+}
+
+.payment__quantity {
+  margin-left: 15px;
+}
+
+.payment--deposit .payment__quantity {
+  color: #128A05;
+}
+
+.payment--withdrawal .payment__quantity {
+  color: #651717;
+}
+
+.historyMain {
+  width: 80%;
+  margin: auto;
+}
+
+.historyTransaction {
+  text-align: center;
+}
+
+.historyBalance {
+  color: white;
 }
 
 .nav > a {
