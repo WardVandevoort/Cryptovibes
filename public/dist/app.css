@@ -294,6 +294,8 @@ h3 {
 }
 
 .avatar {
+  background-image: url("../minilogo.svg");
+  background-repeat: no-repeat;
   width: 20px;
 }
 
@@ -302,8 +304,8 @@ h3 {
   text-decoration: none;
   font-size: 16px;
   color: #FFFFFF;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .nav {
