@@ -6,7 +6,7 @@ document.querySelector(".submit").addEventListener('click', (e) =>{
     let quantity = document.querySelector(".amount").value;
     let message = document.querySelector(".message").value;
 
-    fetch(base_url + 'transfers'),{
+    fetch(base_url + 'api/v1/transfer'),{
         method:"POST",
         headers: {
             'Content-Type': 'application/json'
