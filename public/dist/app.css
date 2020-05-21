@@ -272,17 +272,21 @@ h3 {
   background-image: url("../logocrypto.svg");
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.5;
 }
 
 .historyMain {
   background-color: #000000;
-  opacity: 0.5;
+  opacity: 1;
+}
+
+.historyMain h3 {
+  font-size: 20px;
 }
 
 .historyBalance {
   color: white;
   font-weight: lighter;
-  font-size: 20px;
 }
 
 .balance {
