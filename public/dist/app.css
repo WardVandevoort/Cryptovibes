@@ -307,17 +307,34 @@ label {
   width: 70%;
   margin: auto;
   text-align: center;
+  align-items: center;
 }
 
 .inputText {
   background-color: #000000;
+  border: 1px solid #000000;
   border-bottom: 1px dotted #72ADD1;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .logo {
+  width: 100%;
   background-image: url("../logocrypto.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.login__btn {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: Industry;
+  background-color: #415265;
+  color: white;
+  border-radius: 15px;
 }
 
 .nav > a {
