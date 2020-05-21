@@ -7,7 +7,7 @@ text-align: center;
 }
 
 .payment{
-border-bottom: 1px solid $color-text;
+border-bottom: 1px dotted $color-text;
 padding-top: 10px;
 padding-bottom: 10px;
 }
@@ -24,18 +24,23 @@ color: $color-deposit;
 color: $color-withdrawal;
 }
 
-.historyMain{
+.historyBg{
      width: 70%;
      margin: auto;
      background-image: url("../logocrypto.svg");
      background-repeat: no-repeat;
      background-position: center;
+}
+
+.historyMain{
+     background-color: #000000;
      opacity: 0.5;
 }
 
 .historyBalance{
      color: white;
      font-weight: lighter;
+     font-size: 20px;
 }
 
 .balance{

@@ -249,7 +249,7 @@ h3 {
 }
 
 .payment {
-  border-bottom: 1px solid #72ADD1;
+  border-bottom: 1px dotted #72ADD1;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -266,18 +266,23 @@ h3 {
   color: #651717;
 }
 
-.historyMain {
+.historyBg {
   width: 70%;
   margin: auto;
   background-image: url("../logocrypto.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.historyMain {
+  background-color: #000000;
   opacity: 0.5;
 }
 
 .historyBalance {
   color: white;
   font-weight: lighter;
+  font-size: 20px;
 }
 
 .balance {
