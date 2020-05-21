@@ -301,19 +301,19 @@ h3 {
   font-family: Industry;
   text-decoration: none;
   font-size: 16px;
-  text-align: center;
   color: #FFFFFF;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .nav {
-  margin-top: 30px;
+  margin-top: 40px;
   background-color: #415265;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 15px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=app.css.map */
