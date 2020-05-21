@@ -267,16 +267,20 @@ h3 {
 }
 
 .historyBg {
+  background-color: #000000;
   width: 70%;
   margin: auto;
   background-image: url("../logocrypto.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.historyOverlay {
+  background-color: #000000;
   opacity: 0.5;
 }
 
 .historyMain {
-  background-color: #000000;
   opacity: 1;
 }
 
