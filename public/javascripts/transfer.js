@@ -22,7 +22,7 @@ document.querySelector(".btn").addEventListener('click', (e) =>{
     }).then(response => {
         return response.json();
     }).then(json => {
-        if (json.status === 'succes'){
+        if (json.status === 'success'){
             window.location ='/index';
         }
     })
