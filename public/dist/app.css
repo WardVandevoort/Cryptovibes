@@ -276,12 +276,7 @@ h3 {
 }
 
 .historyOverlay {
-  background-color: #000000;
-  opacity: 0.5;
-}
-
-.historyMain {
-  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .historyMain h3 {
