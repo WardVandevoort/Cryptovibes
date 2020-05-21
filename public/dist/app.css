@@ -2,7 +2,8 @@ body {
   position: relative;
   width: 375px;
   height: 812px;
-  background: #3f3f3f;
+  background: #000000;
+  text-align: left;
   /* background-image: url('./logocrypto.svg');
   background-position: center;
   background-size: 20 10;
@@ -243,7 +244,7 @@ h3 {
 }
 
 .payment__quantity {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .payment--deposit .payment__quantity {
@@ -254,9 +255,17 @@ h3 {
   color: #651717;
 }
 
-.historyTransaction {
+.historyMain {
   width: 80%;
   margin: auto;
+}
+
+.historyTransaction {
+  text-align: center;
+}
+
+.historyBalance {
+  color: white;
 }
 
 /*# sourceMappingURL=app.css.map */
