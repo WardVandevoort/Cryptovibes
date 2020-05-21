@@ -9,7 +9,7 @@ document.querySelector(".submit").addEventListener('click', (e) =>{
     console.log(receiver);
 
     fetch(base_url + 'api/v1/cryptovibes/transfer',{
-        method:"POST",
+        method:"post",
         headers: {
             'Content-Type': 'application/json'
         },
