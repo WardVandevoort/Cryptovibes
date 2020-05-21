@@ -31,8 +31,8 @@ const createTransaction = (req, res, next) => {
     transaction.type_id = req.body.type_id;
     transaction.message = req.body.message;
     transaction.save((err, doc) => {
-        console.log(err);
         if(err){
+            console.log(err);
             res.json({
                 "status": "error",
                 "message": "Failed to save transaction"
