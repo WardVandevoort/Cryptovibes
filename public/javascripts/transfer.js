@@ -8,7 +8,7 @@ document.querySelector(".submit").addEventListener('click', (e) =>{
 
     console.log(receiver);
 
-    fetch(base_url + 'api/v1/transfer',{
+    fetch(base_url + 'transfer',{
         method:"POST",
         headers: {
             'Content-Type': 'application/json'
