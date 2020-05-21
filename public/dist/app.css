@@ -248,12 +248,6 @@ h3 {
   text-align: center;
 }
 
-.payment p .avatar {
-  background-image: url("../minilogo.svg");
-  background-repeat: no-repeat;
-  width: 20px;
-}
-
 .payment {
   border-bottom: 1px dotted #72ADD1;
   padding-top: 10px;
