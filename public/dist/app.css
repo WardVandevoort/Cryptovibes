@@ -245,6 +245,7 @@ h3 {
   margin: 0;
   font-family: Industry;
   color: #72ADD1;
+  text-align: center;
 }
 
 .payment {
@@ -264,17 +265,23 @@ h3 {
 }
 
 .historyMain {
-  width: 80%;
+  width: 70%;
   margin: auto;
+  background-image: url("../logocrypto.svg");
 }
 
-.history {
-  text-align: center;
+.historyMain h3 {
+  text-align: left;
 }
 
 .historyBalance {
   color: white;
-  font-weight: 100;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.balance {
+  color: #128A05;
 }
 
 .nav > a {

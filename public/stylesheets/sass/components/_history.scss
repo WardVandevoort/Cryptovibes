@@ -3,6 +3,7 @@
 margin: 0;
 font-family: Industry;
 color: $color-text;
+text-align: center;
 }
 
 .payment{
@@ -22,15 +23,21 @@ color: $color-withdrawal;
 }
 
 .historyMain{
-     width: 80%;
+     width: 70%;
      margin: auto;
+     background-image: url("../logocrypto.svg");
 }
 
-.history{
-     text-align: center;
+.historyMain h3{
+     text-align: left;
 }
 
 .historyBalance{
      color: white;
-     font-weight: 100;
+     font-weight: lighter;
+     text-align: center;
+}
+
+.balance{
+     color: $color-deposit;
 }
