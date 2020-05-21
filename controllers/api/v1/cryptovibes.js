@@ -3,6 +3,12 @@ const Transaction = require('../../../models/Transaction');
 //get one transaction
 const getOneTransaction = (req, res) => {
     Transaction.find({_id: req.params.id}, (err, doc) => {
+        if(err){
+            res.json({
+                "status": "error",
+                "message": "Transaction not found"
+            })
+        }
         if(!err){
             res.json({
                 "status": "success",
