@@ -15,24 +15,24 @@ h1 Cryptovibes
       .form
         .searchReceiver
           label(for='receiver') Choose your receiver
-          input.receiverName(type='text' value=' ' placeholder='Enter emailadres of receiver')
+          input.receiverName(type='text'placeholder='Enter emailadres of receiver')
           .matchUser
 
         .reason
           label#reasonlabel(for='reason') Reason
             select(name='Reason')
-              option(value='') Design
-              option(value='') Development
-              option(value='') Feedback
-              option(value='') Other
+              option(value='Design') Design
+              option(value='Development') Development
+              option(value='Feedback') Feedback
+              option(value='Other') Other
 
         .amount
           label(for='amount') Amount
-          input#field(type='text' value='' placeholder='amount')
+          input#field(type='text' placeholder='amount')
 
         .message
           label(for='message') Message
-          input#field(type='text' value='' placeholder='message')
+          input#field(type='text' placeholder='message')
 
       .submit
         button.btn(type='submit')
