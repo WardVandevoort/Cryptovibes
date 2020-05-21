@@ -86,6 +86,12 @@ h3 {
   margin-top: 5%;
 }
 
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .searchReceiver {
   display: inline-grid;
   grid-row: 1 1;
@@ -231,7 +237,7 @@ h3 {
 }
 
 .btn-login {
-  position: absolute;
+  display: block;
   width: 150px;
   height: 45px;
   background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
@@ -246,13 +252,6 @@ h3 {
   font-family: Industry;
   color: #72ADD1;
   text-align: center;
-}
-
-.payment p .avatar {
-  width: 40px;
-  background-image: url("../../../minilogo.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .payment {
@@ -298,6 +297,11 @@ h3 {
 .balance {
   color: #128A05;
   margin-left: 15px;
+}
+
+.loginMain {
+  width: 70%;
+  margin: auto;
 }
 
 .nav > a {
