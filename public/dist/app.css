@@ -276,7 +276,7 @@ h3 {
 }
 
 .historyOverlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .historyMain h3 {
@@ -293,13 +293,26 @@ h3 {
   margin-left: 15px;
 }
 
+.avatar {
+  width: 20px;
+}
+
 .nav > a {
   font-family: Industry;
-  font-style: normal;
+  text-decoration: none;
   font-size: 16px;
   text-align: center;
   color: #FFFFFF;
-  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.nav {
+  background-color: #415265;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
 }
 
 /*# sourceMappingURL=app.css.map */
