@@ -20,10 +20,10 @@ document.querySelector(".btn").addEventListener('click', (e) =>{
             "message": message
         })
     }).then(response => {
-        console.log(response);
         return response.json();
     }).then(json => {
-        if (json.status --- 'success'){
+        console.log(json);
+        if (json.status === 'success'){
             alert("Transfer confirmed");
             //window.location.href ='/index';
         }
