@@ -6,10 +6,7 @@ const transactionSchema = new Schema({
     sender_id: String,
     date: String,
     message: String,
-    type_id: {
-        type: String,
-        required: true
-    }
+    type_id: String
 });
 const Transaction = mongoose.model("Transaction", transactionSchema);
 

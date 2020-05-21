@@ -16,7 +16,7 @@ document.querySelector(".btn").addEventListener('click', (e) =>{
         body: JSON.stringify({
             "receiver": receiver,
             "type_id": type_id,
-            "quantity":quantity,
+            "quantity": quantity,
             "message": message
         })
     }).then(response => {
