@@ -19,7 +19,7 @@ document.querySelector(".submit").addEventListener('click', (e) =>{
             "quantity":quantity,
             "message": message
         })
-    }.then(response => {
+    }).then(response => {
         return response.json();
     }).then(json => {
         if (json.status === 'succes'){
@@ -27,4 +27,4 @@ document.querySelector(".submit").addEventListener('click', (e) =>{
         }
     })
         e.preventDefault();
-    })
+    }
