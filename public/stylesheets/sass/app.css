@@ -3,7 +3,6 @@ body {
   width: 375px;
   height: 812px;
   background: #3f3f3f;
-  color: #72ADD1;
   /* background-image: url('./logocrypto.svg');
     background-position: center;
     background-size: 20 10;
@@ -25,7 +24,7 @@ body {
   height: 45px;
 }
 
-.login-content > label {
+.login-content label {
   font-family: Industry;
   font-style: normal;
   font-size: 16px;
