@@ -4,12 +4,13 @@ margin: 0;
 
 .payment{
 border-bottom: 2px solid $color-text;
+background-color: red;
 }
 
-.payment--deposit span{
+.payment--deposit.payment__quantity{
 color: $color-deposit;
 }
 
-.payment--withdrawal span{
+.payment--withdrawal.payment__quantity{
 color: $color-withdrawal;
 }
