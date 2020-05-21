@@ -1,0 +1,15 @@
+.payment p{
+margin: 0;
+}
+
+.payment{
+border-bottom: 2px solid $color-text;
+}
+
+.payment--deposit span{
+color: $color-deposit;
+}
+
+.payment--withdrawal span{
+color: $color-withdrawal;
+}
