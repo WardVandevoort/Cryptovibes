@@ -32,10 +32,10 @@ const createTransaction = (req, res, next) => {
     transaction.message = req.body.message;
     transaction.save((err, doc) => {
         if(err){
-            console.log("test");
+            //console.log("test");
             res.json({
                 "status": "error",
-                "message": "Failed to save transaction"
+                "message": err
             });
         }
 
