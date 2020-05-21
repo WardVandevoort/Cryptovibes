@@ -2,7 +2,7 @@ body {
   position: relative;
   width: 375px;
   height: 812px;
-  background: #000000;
+  background: #3f3f3f;
   /* background-image: url('./logocrypto.svg');
   background-position: center;
   background-size: 20 10;
@@ -22,10 +22,19 @@ body {
   height: 45px;
 }
 
+.login-content label {
+  font-family: Industry;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 .image {
   height: 250px;
   width: auto;
-  background-image: url("./logocrypto.svg");
+  background-image: url("../../../logocrypto.svg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 40vh;
@@ -205,13 +214,41 @@ h3 {
   line-height: 26px;
 }
 
-.navigationbar {
+.btn-login {
+  position: absolute;
+  width: 150px;
+  height: 45px;
+  background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
+  mix-blend-mode: normal;
+  opacity: 0.55;
+  box-shadow: 1px 1px 2px #6D9EB2;
+  border-radius: 16px;
+}
+
+.nav > a {
   font-family: Industry;
   font-style: normal;
   font-size: 16px;
   text-align: center;
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.payment p {
+  margin: 0;
+}
+
+.payment {
+  border-bottom: 2px solid #72ADD1;
+  background-color: blue;
+}
+
+.payment--deposit.payment__quantity {
+  color: #128A05;
+}
+
+.payment--withdrawal.payment__quantity {
+  color: #651717;
 }
 
 /*# sourceMappingURL=app.css.map */
