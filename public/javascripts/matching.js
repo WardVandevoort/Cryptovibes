@@ -25,7 +25,7 @@ const matchUser = document.querySelector('.matchUser');
 
     const outputHtml = matches => {
     if(matches.length > 0){
-        const html = matches.map(match =>`${match.receiverName}`).join('');
+        const html = matches.map(match =>`<a class ='${match.receiverName}' href = " ">${match.receiverName}</a>`).join('');
         matchUser.innerHTML= html; 
         }
     }
