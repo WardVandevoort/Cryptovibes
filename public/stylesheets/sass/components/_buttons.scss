@@ -1,11 +1,11 @@
 .submit{
-    display: flex;
-    justify-content: center;
-    margin-top:-25%;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-top:-25%;
+}
+
 .btn{
-  font-family: Industry;
+  position: absolute;
   width:150px;
   height:45px;
   background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
@@ -13,25 +13,14 @@
   opacity: 0.55;
   box-shadow: 1px 1px 2px #6D9EB2;
   border-radius: 16px;
-  }
-  
-  .btn__text{
-    font-family: Industry;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    text-align: center;
-    color: #FFFFFF;
-    line-height: 26px;
-  }
+}
 
-  /* .btn-login{
-    position: absolute;
-    width:150px;
-    height:45px;
-    background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
-    mix-blend-mode: normal;
-    opacity: 0.55;
-    box-shadow: 1px 1px 2px #6D9EB2;
-    border-radius: 16px;
-  } */
+.btn__text{
+  font-family: Industry;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 26px;
+}

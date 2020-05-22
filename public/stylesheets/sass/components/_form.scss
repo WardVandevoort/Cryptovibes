@@ -1,14 +1,6 @@
 .form{
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-row-gap: 15px;
-    margin-top: 5%;
+  display:grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: 15px;
+  margin-top: 5%;
 }
-
-/* .inputLabel{
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: left;
-  color: $color-text;
-} */
