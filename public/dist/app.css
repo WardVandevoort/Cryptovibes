@@ -6,6 +6,7 @@
   font-style: italic;
   font-weight: 800;
 }
+
 @font-face {
   font-family: "industry";
   src: url("https://use.typekit.net/af/d6b712/00000000000000003b9adf58/27/l?subset_id=2&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/d6b712/00000000000000003b9adf58/27/d?subset_id=2&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/d6b712/00000000000000003b9adf58/27/a?subset_id=2&fvd=n7&v=3") format("opentype");
@@ -13,6 +14,7 @@
   font-style: normal;
   font-weight: 700;
 }
+
 body {
   position: relative;
   width: 375px;
@@ -20,9 +22,9 @@ body {
   background: #000000;
   text-align: left;
   /* background-image: url('./logocrypto.svg');
-  background-position: center;
-  background-size: 20 10;
-  background-repeat: no-repeat; */
+    background-position: center;
+    background-size: 20 10;
+    background-repeat: no-repeat; */
 }
 
 #field {
@@ -33,9 +35,20 @@ body {
   color: #72ADD1;
   opacity: 0.55;
   border: 0px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100px;
   height: 45px;
+}
+
+.login-content label {
+  font-family: Industry;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .image {
@@ -46,7 +59,8 @@ body {
   background-repeat: no-repeat;
   height: 40vh;
   width: auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-left: 35%;
 }
 
@@ -71,41 +85,50 @@ h3 {
 }
 
 .form {
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 15px;
-  margin-top: 0px;
+  margin-top: 5%;
 }
 
 .searchReceiver {
+  display: -ms-inline-grid;
   display: inline-grid;
   grid-row: 1 1;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: Industry;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #7FB3C9;
+  color: #72ADD1;
   border: 0px;
 }
 
 .searchReceiver label {
+  display: -ms-inline-grid;
   display: inline-grid;
   grid-row: 1 1;
 }
 
 .receiverName {
+  display: -ms-inline-grid;
   display: inline-grid;
   grid-row: 1 1;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 250px;
   height: 40px;
   font-family: Industry;
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
-  color: #7FB3C9;
+  color: #72ADD1;
   background: #000000;
   border: dotted 1px;
   border-radius: 16px;
@@ -113,9 +136,12 @@ h3 {
 }
 
 .matchUser {
+  display: -ms-inline-grid;
   display: inline-grid;
   grid-row: 2 2;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: Industry;
   font-style: normal;
   font-size: 18px;
@@ -124,23 +150,30 @@ h3 {
 }
 
 .amount {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   grid-row: 3 3;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: Industry;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #7FB3C9;
+  color: #72ADD1;
   margin-left: -21%;
 }
 
 .amount#field {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
 .reason {
+  display: -ms-inline-grid;
   display: inline-grid;
   grid-row: 3 3;
   font-family: Industry;
@@ -148,16 +181,20 @@ h3 {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #7FB3C9;
+  color: #72ADD1;
 }
 
 .reason label {
+  display: -ms-inline-grid;
   display: inline-grid;
   grid-row: 3 3;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .reason select {
+  display: -ms-inline-grid;
   display: inline-grid;
   grid-row: 3 3;
   border: solid 0.5px;
@@ -168,7 +205,7 @@ h3 {
   font-style: normal;
   font-size: 16px;
   line-height: 22px;
-  color: #7FB3C9;
+  color: #72ADD1;
   background: #000000;
   border: dotted 1px;
   border-radius: 16px;
@@ -176,15 +213,19 @@ h3 {
 }
 
 .message {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   grid-row: 4 4;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: Industry;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #7FB3C9;
+  color: #72ADD1;
   border: 0px;
   margin-left: -20%;
   margin-top: -5%;
@@ -195,9 +236,13 @@ h3 {
 }
 
 .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  margin-top: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -15%;
 }
 
 .btn {
@@ -207,7 +252,8 @@ h3 {
   background: linear-gradient(162.76deg, #786CE6 0%, #747ED3 41.68%, #6D9EB2 100%);
   mix-blend-mode: normal;
   opacity: 0.55;
-  box-shadow: 1px 1px 2px #6D9EB2;
+  -webkit-box-shadow: 1px 1px 2px #6D9EB2;
+          box-shadow: 1px 1px 2px #6D9EB2;
   border-radius: 16px;
 }
 
@@ -277,7 +323,9 @@ h3 {
   width: 70%;
   margin: auto;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .inputText {
@@ -303,7 +351,7 @@ h3 {
   padding-right: 30px;
   font-family: Industry;
   background-color: #415265;
-  color: white;
+  color: #72ADD1;
   border-radius: 15px;
 }
 
@@ -316,7 +364,7 @@ h3 {
   font-family: Industry;
   text-decoration: none;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #72ADD1;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -330,14 +378,4 @@ h3 {
   border-radius: 15px;
   text-align: center;
 }
-
-.login-content label {
-  font-family: Industry;
-  font-style: normal;
-  font-size: 16px;
-  text-align: center;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
 /*# sourceMappingURL=app.css.map */
