@@ -25,7 +25,7 @@ document.querySelector(".btn").addEventListener('click', (e) =>{
         console.log(json);
         if (json.status === 'success'){
             alert("Transfer confirmed");
-            //window.location.href ='/index';
+            window.location.href = base_url;
         }
     })
         e.preventDefault();
