@@ -39,7 +39,7 @@ const createTransaction = (req, res, next) => {
             });
         }
 
-        if(!err){
+        if (!err && transaction.quantity > 0 && transaction.quantity < 100){
             res.json({
                 "status": "success",
                 "data": {
