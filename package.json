@@ -26,6 +26,7 @@
     "ws": "^7.2.5"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "sass": "^1.26.5"
   },
   "description": "",
