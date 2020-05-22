@@ -18,7 +18,7 @@
 body {
   position: relative;
   width: 375px;
-  height: 812px;
+  height: 810px;
   background: #000000;
   text-align: left;
   /* background-image: url('./logocrypto.svg');
@@ -88,7 +88,7 @@ h3 {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 15px;
   margin-top: 5%;
 }
@@ -242,7 +242,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: -10%;
+  margin-top: -7.5%;
 }
 
 .btn {
