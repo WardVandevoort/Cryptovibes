@@ -1,6 +1,6 @@
 const { src, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
-const imagemin = require('gulp-imagemin');
+//const imagemin = require('gulp-imagemin');
 sass.compiler = require('node-sass');
 
 sass2css = function(){
@@ -9,11 +9,11 @@ sass2css = function(){
     .pipe(dest('./public/dist/css/'));
 };
 
-imagemin = function (){
+/* imagemin = function (){
     return gulp.src('./public/svg')
     .pipe(imagemin())
     .pipe(gulp.dest('/dist/app.css'));
-}
+} */
 
 exports.default = function() {
     // You can use a single task
