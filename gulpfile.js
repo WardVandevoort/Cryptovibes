@@ -13,13 +13,13 @@ sass2css = function(){
 gulp.task('minify-css', () => {
 return gulp.src('./public/stylesheets/sass/app.scss')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('/dist'));
+    .pipe(gulp.dest('/dist/app.css'));
 });
 
 gulp.task('imagemin', ()=>{
     return gulp.src('./public/svg')
     .pipe(imagemin())
-    .pipe(gulp.dest('/dist'));
+    .pipe(gulp.dest('/dist/app.css'));
 })
 
 exports.default = function() {
