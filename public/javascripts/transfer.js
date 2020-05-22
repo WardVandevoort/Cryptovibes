@@ -1,12 +1,12 @@
 const base_url ="https://cryptovibes.herokuapp.com/";
 
 document.querySelector(".btn").addEventListener('click', (e) =>{
-    let receiver = document.querySelector(".receiverName").value;
-    let type_id = document.querySelector(".reason").value;
-    let quantity = document.querySelector(".amount").value;
-    let message = document.querySelector(".message").value;
+    let receiver_id = document.querySelector(".receiverName").value;
+    let type_id = document.querySelector("#reason").value;
+    let quantity = document.querySelector(".amountinput").value;
+    let message = document.querySelector(".messageinput").value;
 
-    //console.log(receiver);
+    //console.log(receiver_id);
 
     fetch(base_url + 'api/v1/cryptovibes/transfer',{
         method:"post",
@@ -14,7 +14,7 @@ document.querySelector(".btn").addEventListener('click', (e) =>{
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "receiver": receiver,
+            "receiver_id": receiver_id,
             "type_id": type_id,
             "quantity": quantity,
             "message": message

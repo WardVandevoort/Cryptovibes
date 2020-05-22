@@ -20,7 +20,7 @@ h1 Cryptovibes
 
         .reason
           label#reasonlabel(for='reason') Reason
-            select(name='reason')
+            select#reason(name='reason')
               option(value='Design') Design
               option(value='Development') Development
               option(value='Feedback') Feedback
@@ -28,11 +28,11 @@ h1 Cryptovibes
 
         .amount
           label(for='amount') Amount
-          input#field(type='text' name='amount' placeholder='amount')
+          input#field(class="amountinput" type='text' name='amount' placeholder='amount')
 
         .message
           label(for='message') Message
-          input#field(type='text' name='message' placeholder='message')
+          input#field(class="messageinput" type='text' name='message' placeholder='message')
 
       .submit
         button.btn(type='submit')
