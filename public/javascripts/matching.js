@@ -13,8 +13,9 @@ const matchUser = document.querySelector('.matchUser');
     let matches = receivers.filter(receiver => {
         const regex = new RegExp(`^${searchText}`, 'gi');
         return receiver.receiverName.match(regex);
-        console.log(matches);
     });
+
+    console.log(matches);
 
     if(searchText.length === 0){
         matches = [];
