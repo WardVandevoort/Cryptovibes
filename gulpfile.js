@@ -17,7 +17,7 @@ return gulp.src('./public/stylesheets/sass/app.css')
 });
 
 gulp.task('imagemin', ()=>{
-    return gulp.src('./public/*')
+    return gulp.src('./public/svg')
     .pipe(imagemin())
     .pipe(gulp.dest('./dist'));
 })
@@ -25,5 +25,6 @@ gulp.task('imagemin', ()=>{
 exports.default = function() {
     // You can use a single task
     watch('./public/stylesheets/sass/**/*.scss', sass2css);
+    watch('./public/stylesheets/sass/**/*.scss', task);
     watch('./public/stylesheets/sass/**/*.scss', task);
   };
