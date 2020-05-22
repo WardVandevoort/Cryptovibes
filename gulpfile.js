@@ -5,13 +5,13 @@ const imagemin = require('gulp-imagemin');
 sass.compiler = require('node-sass');
 
 sass2css = function(){
-    return src('./public/stylesheets/sass/app.css')
+    return src('./public/stylesheets/sass/app.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(dest('./dist'));
 };
 
 gulp.task('minify-css', () => {
-return gulp.src('./public/stylesheets/sass/app.css')
+return gulp.src('./public/stylesheets/sass/app.scss')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('./dist'));
 });
