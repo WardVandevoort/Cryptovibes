@@ -5,8 +5,8 @@ sass.compiler = require('node-sass');
 
 sass2css = function(){
     return src('./public/stylesheets/sass/app.scss')
-    .pipe(sass({ outputStyle: "compressed" }).on('error', sass.logError))
-    .pipe(dest('./public/dist/css/'));
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest('./public/dist'));
 };
 
 /* imagemin = function (){
@@ -18,5 +18,5 @@ sass2css = function(){
 exports.default = function() {
     // You can use a single task
     watch('./public/stylesheets/sass/**/*.scss', sass2css);
-    watch('./public/stylesheets/sass/**/*.scss', imagemin);
+    //watch('./public/stylesheets/sass/**/*.scss', imagemin);
 }
