@@ -7,19 +7,19 @@ sass.compiler = require('node-sass');
 sass2css = function(){
     return src('./public/stylesheets/sass/app.css')
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('./dist/app.css'));
+    .pipe(dest('./dist'));
 };
 
 gulp.task('minify-css', () => {
 return gulp.src('./public/stylesheets/sass/app.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./dist/app.css'));
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('imagemin', ()=>{
     return gulp.src('./public/svg')
     .pipe(imagemin())
-    .pipe(gulp.dest('./dist/app.css'));
+    .pipe(gulp.dest('./dist'));
 })
 
 exports.default = function() {
