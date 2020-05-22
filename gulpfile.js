@@ -6,7 +6,7 @@ sass.compiler = require('node-sass');
 sass2css = function(){
     return src('./public/stylesheets/sass/app.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(dest('./public/dist'));
+    .pipe(dest('./public/dist/'));
 };
 
 /* imagemin = function (){
