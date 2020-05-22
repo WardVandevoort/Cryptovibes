@@ -4,22 +4,21 @@ head
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   link(rel='stylesheet', href='https://use.typekit.net/nkl8usf.css')
   link(rel='stylesheet', href='/dist/app.css')
-body
-  section.historyBg
-    section.historyOverlay
-      section.historyMain
-        h1 CRYPTOVIBES
-        h3.historyBalance
-          | Current balance 
-          span.balance
-        // .recentTransaction
-        // h3 Most recent transaction
-        // .recent
-        h3 History
-        .history
-        .navigationbar
-          a.nav(href='/transfer') Transfer
-          a.nav(href='/leaderboard') Leaderboard
-          a.nav(href='/index') Home
-          a.nav(href='/account') Account
-      script(src='../javascripts/index.js')
+section.historyBg
+  section.historyOverlay
+    section.historyMain
+      h1 CRYPTOVIBES
+      h3.historyBalance
+        | Current balance 
+        span.balance
+      // .recentTransaction
+      // h3 Most recent transaction
+      // .recent
+      h3 History
+      .history
+    script(src='../javascripts/index.js')
+.nav
+  a(href='/transfer') Transfer
+  a(href='/leaderboard') Leaderboard
+  a(href='/index') Home
+  a(href='/account') Account

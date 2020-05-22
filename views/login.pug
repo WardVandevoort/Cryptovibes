@@ -1,27 +1,25 @@
 doctype html
 head
   meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  meta(http-equiv='X-UA-Compatible' content='ie=edge')
-
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
   link(rel='stylesheet', href='https://use.typekit.net/nkl8usf.css')
   link(rel='stylesheet', href='/dist/app.css')
-
   title Cryptovibes Log in
 .main
   section.login
     .container
-        .alarm 
-        .login-content
-            div
-                label(for='email') Email
-                input#email.inputText(type='text' name='email')
-            div
-                label(for='password') Password
-                input#password.inputText(type='password' name='password')
-                button.login_btn Login
-            p.signuphere
-            | Don't have an account ? 
-            a.signuphere-link(href='https://cryptovibes.herokuapp.com/users/signup') Signup here
-
+      .login-content
+        h1 CRYPTOVIBES
+        div.logo
+        div
+          label.inputLabel(for='email') Enter your username [r-nummer]
+          input#email.inputText(type='text', name='email', placeholder='Username')
+        div
+          label.inputLabel(for='password') Enter your password
+          input#password.inputText(type='password', name='password', placeholder='Password')
+          p.signuphere
+          | Don't have an account ? 
+          a.signuphere--link(href='https://cryptovibes.herokuapp.com/users/signup') Signup here
+          button.btn.btn--login Let's go !
   script(src='../javascripts/login.js')
