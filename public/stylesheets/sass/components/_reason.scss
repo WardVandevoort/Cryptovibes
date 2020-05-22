@@ -6,7 +6,7 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-    color: #7FB3C9;
+    color: $color-text;
   }
   
   .reason label{
@@ -26,7 +26,7 @@
     font-style: normal;
     font-size: 16px;
     line-height: 22px;
-    color: #7FB3C9;
+    color: $color-text;
     background: #000000;
     border: dotted 1px;
     border-radius: 16px;
