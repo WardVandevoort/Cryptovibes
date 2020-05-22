@@ -38,15 +38,6 @@ body {
   height: 45px;
 }
 
-.login-content label {
-  font-family: Industry;
-  font-style: normal;
-  font-size: 16px;
-  text-align: center;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
 .image {
   height: 250px;
   width: auto;
@@ -321,7 +312,7 @@ h3 {
   font-family: Industry;
 }
 
-.nav > a {
+.nav a {
   font-family: Industry;
   text-decoration: none;
   font-size: 16px;
@@ -338,6 +329,15 @@ h3 {
   padding-bottom: 20px;
   border-radius: 15px;
   text-align: center;
+}
+
+.login-content label {
+  font-family: Industry;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=app.css.map */
